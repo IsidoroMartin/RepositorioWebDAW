@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+/**
+ * Autor = Juan José Ramírez Sánchez
+ * Fecha = 16 de dic. de 2015
+ * Licencia = gpl3.0
+ * Version = 1.0
+ * Descripcion = Estilos para la página de rutas
+/*
+    Copyright (C) 2015  Juan José Ramírez Sánchez
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Titulo rutas buscadas*/
+#tit-rutas-buscadas{
+    margin:0px;
+}
+
+/* El texto del formulario aparecerá centrado*/
+#formulario-filtro {
+	text-align: center;
+}
+/* todos los elementos del formulario tendrán este margen*/
+#formulario-filtro>* {
+	margin: 10px 13px;
+}
+/*Estilo botón del filtro*/
+#btn-filtro {
+	margin-left: 20px;
+    background-color: #024423;
+    border-color: #E7E7E7;
+}
+
+/*Hover del botón de filtro*/
+#btn-filtro:hover {
+	opacity: 0.8;
+}
+
+/*El fondo de los filtros*/
+#fondo-filtro {
+	background-image: url("../img/fondo_buscador_rutas_guiadas.png");
+	height: 100px;
+}
+
+/*Botones siguiente y anterior paginación rutas*/
+#paginacion span{
+    font-weight: 200;
+    font-size: 1.5rem;
+    color:black;
+    cursor: pointer;
+}
+
+/*Botones siguiente y anterior paginación rutas hover*/
+#paginacion span:hover{
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+/*Botones de contratar y más imagenes de cada ruta*/
+div.btn-rutas button {
+    background-color: #024423;
+    border-color: #E7E7E7;
+	width:48%;
+}
+/*hover Botones de contratar y más imagenes de cada ruta*/
+div.btn-rutas button:hover {
+	background-color: #024423;
+	border-color: #E7E7E7;
+	opacity: 0.8;
+}
+
+
+/*Estilo de las rutas */
+.rutas-posibles {
+	margin-top: 20px;
+	height: 35%;
+    margin-bottom:1%;
+}
+
+/* Estilo de las imagenes de las rutas */
+.rutas-posibles img {
+	width: 200px;
+	height: 130px;
+}
+
+/* Tamaño del titulo de las rutas*/
+.rutas-posibles h4 {
+	font-size:2.5rem;
+}
+
+/* tamaño información rutas*/
+.informacion-rutas {
+	font-size:1.8rem;
+    line-height: 35px;
+    margin-top:2%;
+}
+
+
+
+@media only screen and (max-width: 1000px) and (min-width:769px) {
+	#formulario-filtro input, #formulario-filtro select {
+		width: 103px;
+		font-size:0.91rem;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+	#fondo-filtro {
+		height: 35%;
+		font-size:0.91rem;
+	}
+	#btn-filtro {
+		margin-top: 20px;
+	}
+}

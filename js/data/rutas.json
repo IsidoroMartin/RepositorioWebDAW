@@ -1,0 +1,162 @@
+[
+  {
+    "nombre": "El Cares",
+    "dificultad": "Fácil",
+    "popular": false,
+    "comunidad": "Asturias",
+    "tiempo": "3",
+    "kilometros": "3",
+    "descripcion": "La ruta del cares que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Montaña",
+    "images": [
+      "img/rutas/cares/imagen1.jpg",
+      "img/rutas/cares/imagen2.jpg",
+      "img/rutas/cares/imagen3.jpg",
+      "img/rutas/cares/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "El Yelmo",
+    "dificultad": "Normal",
+    "popular": true,
+    "comunidad": "Madrid",
+    "tiempo": "3",
+    "kilometros": "303",
+    "descripcion": "La ruta del cares que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Montaña",
+    "images": [
+      "img/rutas/yelmo/imagen1.jpg",
+      "img/rutas/yelmo/imagen2.jpg",
+      "img/rutas/yelmo/imagen3.jpg",
+      "img/rutas/yelmo/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "La Presa ",
+    "dificultad": "Difícil",
+    "popular": false,
+    "comunidad": "Cataluña",
+    "tiempo": "7",
+    "kilometros": "10",
+    "descripcion": "La ruta mas bonita de Barcelona",
+    "tipo": "Bicicleta",
+    "images": [
+      "img/rutas/presa/imagen1.jpg",
+      "img/rutas/presa/imagen2.jpg",
+      "img/rutas/presa/imagen3.jpg",
+      "img/rutas/presa/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "La Camorza",
+    "dificultad": "Fácil",
+    "popular": true,
+    "comunidad": "Madrid",
+    "tiempo": "2",
+    "kilometros": "6",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Sendero",
+    "images": [
+      "img/rutas/camorza/imagen1.jpg",
+      "img/rutas/camorza/imagen2.jpg",
+      "img/rutas/camorza/imagen3.jpg",
+      "img/rutas/camorzas/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Cuerda Larga",
+    "dificultad": "Difícil",
+    "popular": true,
+    "comunidad": "Madrid",
+    "tiempo": "6:30",
+    "kilometros": "2",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Sendero",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Pico de Abantos",
+    "dificultad": "Fácil",
+    "popular": true,
+    "comunidad": "Madrid",
+    "tiempo": "6:30",
+    "kilometros": "28.93",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Montaña",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Puentes Colgantes",
+    "dificultad": "Normal",
+    "popular": false,
+    "comunidad": "Valencia",
+    "tiempo": "2:30",
+    "kilometros": "9",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Sendero",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Laguna Larga",
+    "dificultad": "Difícil",
+    "popular": true,
+    "comunidad": "Andalucía",
+    "tiempo": "9:00",
+    "kilometros": "25",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Sendero",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Guejar de la Sierra",
+    "dificultad": "Difícil",
+    "popular": true,
+    "comunidad": "Andalucía",
+    "tiempo": "10:30",
+    "kilometros": "34",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Montaña",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  },
+  {
+    "nombre": "Cerro de las nubes",
+    "dificultad": "Fácil",
+    "popular": false,
+    "comunidad": "Cantabria",
+    "tiempo": "2:00",
+    "kilometros": "5,5",
+    "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
+    "tipo": "Sendero",
+    "images": [
+      "img/rutas/cuerdalarga/imagen1.jpg",
+      "img/rutas/cuerdalarga/imagen2.jpg",
+      "img/rutas/cuerdalarga/imagen3.jpg",
+      "img/rutas/cuerdalarga/imagen4.jpg"
+    ]
+  }
+]

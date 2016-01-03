@@ -1,0 +1,41 @@
+#div_animacion {
+    background-color: red;
+
+}
+
+@keyframes animacion {
+    0% {
+        background-color: red
+    }
+    100% {
+        background-color: yellow
+    }
+}
+
+.animacion {
+    animation-name: animacion;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+#cuadrado {
+    position: absolute;
+    left: 0px;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+
+.animacion_cuadrado {
+    animation-name: animacion_cuadrado;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+}
+@keyframes animacion_cuadrado {
+    0%{left: 0px;}
+    100%{left: 100%;}
+}
+

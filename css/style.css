@@ -1,0 +1,51 @@
+/*fuente */
+
+@font-face {
+    font-family: JosefinSans-Regular;
+    src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf");
+    font-weight: 400;
+}
+
+html, body {
+    font-family: JosefinSans-Regular;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    color: #024423;
+}
+
+p {
+    font-size: 17px;
+}
+
+nav.navbar, nav.navbar-default {
+    margin-bottom: 0px;
+}
+
+header div.col-md-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#migas-pan {
+    font-weight: 300;
+    margin-top: 6%;
+}
+
+#migas-pan a {
+    color: white;
+}
+
+#migas-pan ol{
+    background-color:#024423;
+}
+
+#migas-pan li {
+    color:antiquewhite;
+
+}
