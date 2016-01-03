@@ -33,19 +33,16 @@ header div.col-md-12 {
 }
 
 #migas-pan {
-    font-weight: 300;
     margin-top: 6%;
 }
 
-#migas-pan a {
-    color: white;
+#footer-img {
+    background-image: url("../img/footer-img.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-bottom: 10%;
 }
 
-#migas-pan ol{
-    background-color:#024423;
-}
-
-#migas-pan li {
-    color:antiquewhite;
-
+footer {
+    background-color: #000600;
 }

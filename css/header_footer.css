@@ -46,26 +46,26 @@ header span.colorYellow{
 
 /*padding izquierdo para el logo*/
 .logo{
-padding-left: 4.5%;
+	padding-left: 4.5%;
 }
 
 /*tamaño de letra del header para tablet y moviles*/
 @media (max-width: 768px) {
-header h1{
-	font-size: 5rem;
-}
+	header h1{
+		font-size: 5rem;
+	}
 }
 /*tamaño de letra del header para  moviles*/
 @media (max-width: 480px) {
-header h1 {
-	font-size: 3rem;
-}
+	header h1 {
+		font-size: 3rem;
+	}
 }
 /**********footer*****************/
 /*fondo y altura del footer*/
 footer {
-    background-image:url("../img/footer_grande.png");
-    height: 300px;
+	/*background-image:url("../img/footer_grande.png");*/
+	/*height: 200px;*/
 }
 
 /*margen arriba del parrafo */
@@ -73,26 +73,9 @@ div.copyright p {
 	margin-bottom: 0.5%;
 }
 
-/*posicion para las diferentes listas del footer*/
-.linksfooter1 {
-	_left: 8%;
-}
-
-.linksfooter2 {
-	_left: 21%;
-}
-
-.linksfooter3 {
-	_left: 37%;
-}
-
-.linksfooter4 {
-	_left: 53%;
-}
-
 /*centrado y tamaño de la fuente de las listas del footer */
 div.linksfooter1 ul li, div.linksfooter2 ul li, div.linksfooter3 ul li,
-	div.linksfooter4 ul li {
+div.linksfooter4 ul li {
 	list-style-type: none;
 	text-align: center;
 	font-size: 1.2rem;
@@ -104,13 +87,12 @@ footer a {
 }
 /*color de links visitados */
 .linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
-	.linksfooter4 a:hover {
+.linksfooter4 a:hover {
 	color: #477e25;
 }
 
 /*fondo posicion color y tamaño de fuente del copyright*/
 .copyright{
-	background-color:#030f05;
 	position:relative;
 	color: #ffffff;
 	top: 65%;
@@ -120,12 +102,21 @@ footer a {
 
 /*fondo, posicion de la fila que contiene los links del footer*/
 .linksfooter{
-	background-color:#030f05;
 	position:relative;
 	top: 65%;
 }
 
 footer div.row {
-    margin-right: 0px;
-    margin-left: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+/*fondo, posicion de la fila que contiene los links del footer*/
+.linksfooter {
+	position: relative;
+	top: 65%;
+}
+
+.padding0 {
+	padding-left: 0px;
+	padding-right: 0px;
 }
