@@ -2,7 +2,7 @@
  JavaScript para el funcionamiento de la galeria jssor
  **/
 
-jssor_1_slider_init = function() {
+function galeriaF($) {
             
             var jssor_1_SlideshowTransitions = [
               {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
@@ -63,8 +63,8 @@ jssor_1_slider_init = function() {
                 }
             }
             ScaleSlider();
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
-        };
+        }
