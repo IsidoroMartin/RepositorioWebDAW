@@ -83,12 +83,19 @@ div.linksfooter4 ul li {
 
 /*color de links del footer */
 footer a {
-	color: #ffffff;
+	color: #ffffff;	
 }
-/*color de links visitados */
+/*color de links al posicinar el raton encima */
 .linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
 .linksfooter4 a:hover {
-	color: #477e25;
+	color: #024423;	
+	text-decoration:none; 	 
+}
+
+/*color de links visitados */
+.linksfooter1 a:active, .linksfooter2 a:active, .linksfooter3 a:active,
+.linksfooter4 a:active {
+	color: #808000;  
 }
 
 /*fondo posicion color y tamaño de fuente del copyright*/

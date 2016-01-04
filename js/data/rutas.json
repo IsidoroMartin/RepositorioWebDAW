@@ -89,10 +89,10 @@
     "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
     "tipo": "Montaña",
     "images": [
-      "img/rutas/cuerdalarga/imagen1.jpg",
-      "img/rutas/cuerdalarga/imagen2.jpg",
-      "img/rutas/cuerdalarga/imagen3.jpg",
-      "img/rutas/cuerdalarga/imagen4.jpg"
+      "img/rutas/abantos/imagen1.jpg",
+      "img/rutas/abantos/imagen2.jpg",
+      "img/rutas/abantos/imagen3.jpg",
+      "img/rutas/abantos/imagen4.jpg"
     ]
   },
   {
@@ -105,10 +105,10 @@
     "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
     "tipo": "Sendero",
     "images": [
-      "img/rutas/cuerdalarga/imagen1.jpg",
-      "img/rutas/cuerdalarga/imagen2.jpg",
-      "img/rutas/cuerdalarga/imagen3.jpg",
-      "img/rutas/cuerdalarga/imagen4.jpg"
+      "img/rutas/puentes/imagen1.jpg",
+      "img/rutas/puentes/imagen2.jpg",
+      "img/rutas/puentes/imagen3.jpg",
+      "img/rutas/puentes/imagen4.jpg"
     ]
   },
   {
@@ -121,10 +121,10 @@
     "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
     "tipo": "Sendero",
     "images": [
-      "img/rutas/cuerdalarga/imagen1.jpg",
-      "img/rutas/cuerdalarga/imagen2.jpg",
-      "img/rutas/cuerdalarga/imagen3.jpg",
-      "img/rutas/cuerdalarga/imagen4.jpg"
+      "img/rutas/laguna/imagen1.jpg",
+      "img/rutas/laguna/imagen2.jpg",
+      "img/rutas/laguna/imagen3.jpg",
+      "img/rutas/laguna/imagen4.jpg"
     ]
   },
   {
@@ -137,10 +137,10 @@
     "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
     "tipo": "Montaña",
     "images": [
-      "img/rutas/cuerdalarga/imagen1.jpg",
-      "img/rutas/cuerdalarga/imagen2.jpg",
-      "img/rutas/cuerdalarga/imagen3.jpg",
-      "img/rutas/cuerdalarga/imagen4.jpg"
+      "img/rutas/guejar/imagen1.jpg",
+      "img/rutas/guejar/imagen2.jpg",
+      "img/rutas/guejar/imagen3.jpg",
+      "img/rutas/guejar/imagen4.jpg"
     ]
   },
   {
@@ -153,10 +153,10 @@
     "descripcion": "La ruta delmanza que se encuentra en la orilla del cares es mu bonita",
     "tipo": "Sendero",
     "images": [
-      "img/rutas/cuerdalarga/imagen1.jpg",
-      "img/rutas/cuerdalarga/imagen2.jpg",
-      "img/rutas/cuerdalarga/imagen3.jpg",
-      "img/rutas/cuerdalarga/imagen4.jpg"
+      "img/rutas/cerro/imagen1.jpg",
+      "img/rutas/cerro/imagen2.jpg",
+      "img/rutas/cerro/imagen3.jpg",
+      "img/rutas/cerro/imagen4.jpg"
     ]
   }
 ]

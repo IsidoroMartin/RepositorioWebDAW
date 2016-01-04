@@ -25,7 +25,7 @@
     <!-- Hoja de estilos para header y footer -->
     <link href="css/header_footer.css" rel="stylesheet">
     <link href="css/redesSociales.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
 
     <!--formulario -->
@@ -84,8 +84,14 @@
 </div>
 <!-- fin menu navegacion  -->
 
+<!--Contenedor para las migas de pan -->
+<div style="margin-top:1%" class="container">
+    <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li class="active">Contacto</li>
+    </ol>
+</div>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container">
     <div class="row fondoForm">
         <div class="col-md-12">
@@ -114,7 +120,7 @@
                                                                                       required>
                         </div>
 
-
+z
                         <div class="form-group">
                             <label class="sr-only" for="primerApellido">primer
                                 Apellido</label> <input type="text" id="primerApellido"
@@ -135,7 +141,7 @@
                         <div class="form-group">
                             <label class="sr-only" for="email">Email</label> <input
                                 type="email" id="email" class="form-control"
-                                placeholder="Email@ejemplo.com" title="Introduce un email" oninvalid="this.value=''"
+                                placeholder="correo@ejemplo.com" title="Introduce un email" oninvalid="this.value=''"
                                 oninput="activarBoton(frm)" required>
                         </div>
 
@@ -143,7 +149,7 @@
                             <div class="col-xs-6">
                                 <label class="sr-only" for="telefonoFijo">Telefono Fijo</label>
                                 <input type="tel" id="telefonoFijo"
-                                       class="form-control" placeholder="910000000"
+                                       class="form-control" placeholder="Teléfono Fijo"
                                        oninvalid="this.value=''"
                                        title="Introduce un telefono que empiece por 91 seguido de 7 numeros"
                                        pattern="^[9]\d{8}$"
@@ -152,11 +158,12 @@
                             <div class="col-xs-6">
                                 <label class="sr-only" for="telefonoMovil">Telefono
                                     Movil</label> <input type="tel" id="telefonoMovil"
-                                                         class="form-control" placeholder="610000000"
+                                                         class="form-control" placeholder="Teléfono móvil"
                                                          oninvalid="this.value=''"
-                                                         title="Introduce un telefono que empiece por 61 seguido de 7 numeros"
-                                                         pattern="^[6]\d{8}$"
-                                                         oninput="activarBoton(frm)" required/>
+                                                         pattern="^[67]\d{8}$"
+                                                         oninput="activarBoton(frm)"
+                                                         title="Introduce un telefono que empiece por 6 o 7 seguido de 8 numeros"
+                                                         required/>
                             </div>
                         </div>
 
@@ -177,7 +184,7 @@
                                 <option value="consulta">Tipo de consulta</option>
                                 <option value="sugerencia">Sugerencia</option>
                                 <option value="queja">Queja</option>
-                                <option value="informacion">Informacion</option>
+                                <option value="informacion">Información</option>
                             </select>
                             </div>
                             <div class="col-xs-6">
@@ -197,11 +204,7 @@
                                 Condiciones de uso
                             </label>
                         </div>
-
-
                         <button type="submit" id="envio" class="btn" disabled>Enviar</button>
-
-
                     </form>
                 </div>
             </div>
@@ -246,8 +249,10 @@
             <div class="linksfooter4 col-md-2 col-sm-6">
                 <ul>
                     <li><a href="#">Politica De Privacidad </a></li>
-                    <li><a href="#">Gastos De Envio</a></li>
-                    <li><a href="#">Sala De Prensa </a></li>
+                    <li><a href="contacto.html">Contacte con nosotros</a></li>
+                    <li><a href="licencia.html" target="hola"
+                           onClick="window.open(this.href, this.target, 'width=600,height=600'); return false;">Licencia </a>
+                    </li>
                 </ul>
             </div>
 
@@ -277,17 +282,18 @@
         </div>
         <div class="copyright row">
             <div class="col-md-12 col-sm-12">
-                <p>NaturePath@hotmail.com 2015 | Todos Los Derechos Reservados.</p>
+                <p>Juan Jose Ramirez | Isidoro Martin | Miguel Cobertera | Yesica Rojas</p>
             </div>
         </div>
     </div>
 </footer>
 
+
+<!--Fin pie de pagina  -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
 </html>

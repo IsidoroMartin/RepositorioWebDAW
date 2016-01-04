@@ -36,3 +36,24 @@ html{
 ul {
 	list-style: none;
 }
+/*migas de pan*/
+div#migas {
+	padding-top: 0%;
+}
+
+/* color de fuente de los links de las migas de pan */
+div#migas a {
+	color: #000000;	
+	text-decoration:none; 	
+}
+/* color de fuente de los links de las migas de pan al posicionarse encima y del footer*/
+div#migas a:hover,.linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
+.linksfooter4 a:hover {
+	color: #024423;	  
+}
+/* color de fuente de los links de las migas de pan al posicionarse encima*/
+div#migas a:ACTIVE,.linksfooter1 a:active, .linksfooter2 a:active, .linksfooter3 a:active,
+.linksfooter4 a:active {
+	color: #808000;  
+}
+/*color de links del footer */
