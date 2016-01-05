@@ -33,7 +33,7 @@
 }
 /* todos los elementos del formulario tendrán este margen*/
 #formulario-filtro>* {
-	margin: 10px 13px;
+	margin: 10px 40px;
 }
 /*Estilo botón del filtro*/
 #btn-filtro {

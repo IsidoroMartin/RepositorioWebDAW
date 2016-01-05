@@ -129,9 +129,9 @@ function filtrarRutasPorDistancia(listaRutas, distancia) {
             && (kilometros >= 3 && kilometros < 6)) {
             rutas.push(listaRutas[i]);
         } else if (distancia == 3
-            && (kilometros >= 6 && kilometros < 10)) {
+            && (kilometros >= 6 && kilometros <= 10)) {
             rutas.push(listaRutas[i]);
-        } else if (distancia == 4 && (kilometros >= 10)) {
+        } else if (distancia == 4 && (kilometros > 10)) {
             rutas.push(listaRutas[i]);
         }
     }

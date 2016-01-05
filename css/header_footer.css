@@ -30,6 +30,7 @@ Descripcion=
 /***********header*****************/
 
 /*tamaño posicion y fuente para el titulo de la cabecera*/
+
 header h1 {
 	font-size: 8rem;
 	font-family: fuenteHeader;
@@ -42,6 +43,10 @@ header span.colorGreen{
 header span.colorYellow{
 	/*color: #808040;*/
 	color: #808040;
+}
+
+footer{
+	font-family: Arial;
 }
 
 /*padding izquierdo para el logo*/
@@ -92,12 +97,6 @@ footer a {
 	text-decoration:none; 	 
 }
 
-/*color de links visitados */
-.linksfooter1 a:active, .linksfooter2 a:active, .linksfooter3 a:active,
-.linksfooter4 a:active {
-	color: #808000;  
-}
-
 /*fondo posicion color y tamaño de fuente del copyright*/
 .copyright{
 	position:relative;
@@ -126,4 +125,9 @@ footer div.row {
 .padding0 {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+/*Color de los enlaces del footer visitados*/
+.link:visited{
+	color:gray;
 }
