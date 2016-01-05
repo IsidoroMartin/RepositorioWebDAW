@@ -101,11 +101,13 @@
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/galeria/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
+        <!-- contenedor de cada una de las imagenes con su correspondiente miniatura -->
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
             <div data-p="144.50" style="display: none;">
                 <img data-u="image" src="img/galeria/01.jpg" />
                 <img data-u="thumb" src="img/galeria/thumb-01.jpg" />
             </div>
+        <!-- Fin del contendor de imagen y miniatura -->
             <div data-p="144.50" style="display: none;">
                 <img data-u="image" src="img/galeria/02.jpg" />
                 <img data-u="thumb" src="img/galeria/thumb-02.jpg" />
@@ -169,17 +171,8 @@
         <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
     </div>
-
-    <!-- Fin de la galeria de imagenes -->
- 
- 
-    
+    <!-- Fin de la galeria de imagenes -->   
 </div>
-
-
-
-
-
 
 <!-- /container -->
 <div class="row ">
@@ -261,14 +254,16 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-
+<!-- Version jquery 1..9.1 con la cual funciona la galeria -->
 <script src="js/galeria/jquery-1.9.1.min.js"></script>
 <script src="js/slider/docs.min.js"></script>
+<!-- Archivo jssor.slider.mini.js para el funcionamiento de la galeria -->
 <script src="js/galeria/jssor.slider.mini.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slider/ie10-viewport-bug-workaround.js"></script>
 <script src="js/slider/slider.js"></script>
+<!-- Funciones de la galeria -->
 <script type="text/javascript"  src="js/galeria/galeria.js" onload="galeriaF()"></script>
 </body>
 </html>
