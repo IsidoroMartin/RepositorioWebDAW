@@ -33,7 +33,6 @@ function rellenarLista(frm) {
 
     } else {
         frm.asunto.disabled = true
-
     }
 
     var arraytextos = new Array(4)
