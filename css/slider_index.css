@@ -83,7 +83,7 @@
 .jssora21r.jssora21rdn {
     background-position: -303px -33px;
 }
-
+/*Oculto los circulos que representan la imagen actual y el resto de imagenes de el slider*/
 @media only screen and (max-width: 769px) {
     div[u=prototype] {
         display: none;

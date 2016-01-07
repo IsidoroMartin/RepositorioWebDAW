@@ -1,8 +1,10 @@
+/*Importo la tipografía necesaria*/
 @font-face {
     font-family: PaintTheCity;
     src: url("../fonts/Paint%20the%20town.ttf");
 }
 
+/*Aplico los estilos para el div de la animacion*/
 #div_animacion {
     position: relative;
     background-image: url("../img/animacion/fondo.jpg");
@@ -10,16 +12,17 @@
     background-repeat: no-repeat;
 }
 
+/*Quito los margenes al encabezado de nivel 1 que está dentro de la animacion*/
 #div_animacion h1 {
     margin: 0px;
     padding: 0px;
 }
-
+/*Doy un formato a los encabezados de nivel 2 de la animacion*/
 #div_animacion h2 {
     font-size: 2.3rem;
     color: white;
 }
-
+/*Posiciono y aplico el fondo a la hierba de la animacion */
 #hierba {
     position: absolute;
     top: 258px;
@@ -29,7 +32,7 @@
     width: 100%;
     padding-bottom: 11%;
 }
-
+/*Posiciono y aplico el fondo al poste de la animacion */
 #poste {
     position: absolute;
     right: 0%;
@@ -42,13 +45,14 @@
     padding-bottom: 25%;
 }
 
+/*Clase que se aplica cada vez que se inicia la animación de desplazamiento de el poste*/
 .animacion_poste {
     animation-name: desplazamiento_poste;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Keyframes de la animacion que se encarga de desplazar el poste desde el top hasta su posicion*/
 @keyframes desplazamiento_poste {
     75% {
         transform: rotate(2deg);
@@ -65,7 +69,7 @@
         right: 48%;
     }
 }
-
+/*Posiciono y aplico los estilos a la madera de el letrero de la animacion*/
 #madera_grande {
     position: absolute;
     top: -25%;
@@ -76,7 +80,7 @@
     padding: 1.5%;
     width: 20%;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación de desplazamiento de la madera de el letrero*/
 .animacion_madera_grande {
     animation-name: desplazamiento_madera_grande;
     animation-duration: 1s;
@@ -84,7 +88,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Keyframes de la animacion que se encarga de desplazar el la madera desde el top hasta su posicion*/
 @keyframes desplazamiento_madera_grande {
     50% {
         transform: scale(1.5, 1.5)
@@ -98,17 +102,15 @@
 
     }
 }
-
+/*Aplico un formato al texto que aparece en el cartel*/
 #titulo_nature_path {
     text-align: center;
     color: white;
     font-family: PaintTheCity;
-}
-
-.animacion_titulo_nature, .animacion_titulo_path {
     letter-spacing: 7px;
 }
 
+/*Posiciono la planta 1  con opacidad 0 que se visualizará posteriormente*/
 #planta1 {
     opacity: 0;
     position: absolute;
@@ -123,7 +125,7 @@
 
 .animacion_planta1 {
     animation-name: mostrarDiv;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-delay: 6.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -184,7 +186,7 @@
 .animacion_planta5 {
     animation-name: mostrarDiv;
     animation-duration: 1.5s;
-    animation-delay: 6s;
+    animation-delay: 5.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -196,10 +198,8 @@
 }
 
 #promos {
-    margin-top: 4%;
+    margin-top: 2%;
 }
-
-
 
 #promo_rutas, #galeria {
     opacity: 0;
@@ -210,13 +210,19 @@
 }
 
 .animacion_txt_emergente {
-    animation-name: mostrarDiv;
-    animation-duration: 2s;
-    animation-delay: 6.7s;
+    animation-name: mostrarTxtEmergente;
+    animation-duration: 1s;
+    animation-delay: 7.8s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
+@keyframes mostrarTxtEmergente {
+    100% {
+        margin-top: 3%;
+        opacity: 1
+    }
+}
 
 
 
