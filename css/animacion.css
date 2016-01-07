@@ -212,7 +212,7 @@
 .animacion_txt_emergente {
     animation-name: mostrarDiv;
     animation-duration: 2s;
-    animation-delay: 6.5s;
+    animation-delay: 6.7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

@@ -33,7 +33,6 @@
 <body>
 <!-- cabecera  -->
 <div class="container">
-    <!-- cabecera  -->
     <div class="row">
         <header>
             <div id="logo" class="col-xs-5 col-md-2">
@@ -83,9 +82,6 @@
 
 <!--
     @Isi
-    El slider va moviendo las imagenes desde la derecha a la izquierda (desde 1300 hasta 0 y de ahí a -1300)
-    Para la animacion detectar en botones de flechas o del panel de navegacion de el slider o Averiguar cuando se efectúa el paso de imagen
-    Tambien podemos saber cual es la imagen actual sabiendo cual es el elemento de el navegador de el slider que tiene la clase av
 -->
 </div>
 <div style="min-height: 50px;">
@@ -99,8 +95,8 @@
         <!-- Slides Container -->
         <div u="slides"
              style="cursor: pointer; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
+            <!--Div que representa la capa en la que estan los elementos de la animación-->
             <div id="div_animacion">
-                <div id="reload"></div>
                 <div id="cartel">
                     <div id="poste" class="animacion_poste"></div>
                     <div id="madera_grande" class="animacion_madera_grande">
@@ -116,6 +112,7 @@
                 </div>
                 <div id="hierba"></div>
                 <div class="container">
+                    <!--Div que contiene el texto publicitario de la pagina-->
                     <div class="row" id="promos">
                         <div id="promo_rutas"
                              class="col-lg-3 col-lg-offset-1  col-md-4  col-xs-4  animacion_txt_emergente">
@@ -131,9 +128,11 @@
                     </div>
                 </div>
             </div>
+            <!--Div que representa la segunda imagen del slider-->
             <div>
                 <img u="image" src="./img/slider/imagenes/1.png"/>
             </div>
+            <!--Div que representa la tercera imagen del slider-->
             <div>
                 <img u="image" src="./img/slider/imagenes/1.png"/>
             </div>
@@ -153,6 +152,7 @@
     <!-- Jssor Slider End -->
 
 </div>
+<!--Div que contiene los textos informativos de la pagina-->
 <div id="home-texto" class="container">
     <div class="row">
         <div class="col-lg-3 col-lg-offset-1 col-md-4 col-xs-12">
@@ -172,7 +172,7 @@
     </div>
     <hr>
 </div>
-<!-- /container -->
+<!--Div que contiene la imagen de los arboles de el footer-->
 <div class="row ">
     <div id="footer-img" class="col-md-12">
     </div>
@@ -180,6 +180,7 @@
 <!-- pie de pagina  -->
 <footer>
     <div class="container">
+        <!--Links del footer-->
         <div class="linksfooter row">
             <div class="linksfooter1 col-md-2 col-sm-6">
                 <ul>
