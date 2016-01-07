@@ -1,29 +1,24 @@
 /*fuente */
 
-@font-face {
-    font-family: JosefinSans-Regular;
-    src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf");
-    font-weight: 400;
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 html, body {
     font-family: JosefinSans-Regular;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 h1, h2, h3, h4 {
     color: #024423;
-}
-
-h2, h3, h4 {
     font-weight: bold;
 }
 
+/* Un parrafo tendra un tamaño de 20px*/
 p {
-    font-size: 17px;
+    font-size: 2rem;
 }
 
 nav.navbar, nav.navbar-default {
@@ -35,8 +30,49 @@ header div.col-md-12 {
     padding-right: 0px;
 }
 
+/*tamaño posicion y fuente para el titulo de la cabecera*/
+header h1 {
+    font-size: 8rem;
+    font-family: fuenteHeader;
+    font-weight: normal;
+}
+
+/*color para el titulo de la cabecera (solo la parte nature)*/
+header span.colorGreen {
+    color: #024423;
+}
+
+/*color para el titulo de la cabecera (solo la parte Path)*/
+header span.colorBrown {
+    /*color: #808040;*/
+    color: #805F40;
+}
+
+footer {
+    background-color: #000600;
+}
+
+/**********footer*****************/
+/*fondo y altura del footer*/
+footer {
+    font-family: Arial;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/*padding izquierdo para el logo*/
+#logo {
+    margin-top: 0.5%;
+}
+
+#nombre-empresa {
+    text-align: center;
+}
+
 #migas-pan {
-    margin-top: 6% ;
+    margin-top: 6%;
 }
 
 #footer-img {
@@ -46,6 +82,248 @@ header div.col-md-12 {
     padding-bottom: 10%;
 }
 
-footer {
-    background-color: #000600;
+/*margen arriba del parrafo */
+div.copyright p {
+    margin-bottom: 0.5%;
+}
+
+/*centrado y tamaño de la fuente de las listas del footer */
+div.linksfooter1 ul li, div.linksfooter2 ul li, div.linksfooter3 ul li,
+div.linksfooter4 ul li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/*color de links visitados */
+.linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
+.linksfooter4 a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/*fondo posicion color y tamaño de fuente del copyright*/
+.copyright {
+    position: relative;
+    color: #ffffff;
+    top: 65%;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+/*fondo, posicion de la fila que contiene los links del footer*/
+.linksfooter {
+    position: relative;
+    top: 65%;
+}
+
+footer div.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/*fondo, posicion de la fila que contiene los links del footer*/
+.linksfooter {
+    position: relative;
+    top: 65%;
+}
+
+.padding0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Color de los enlaces del footer visitados*/
+.link:visited {
+    color: gray;
+}
+
+ol.breadcrumb a {
+    color: darkgreen;
+}
+
+/*****Menu nav*********/
+/*color de fondo del menu de navegacion*/
+.navbar-default {
+    background-color: #024423;
+    /*border-color: #E7E7E7;*/
+    border: 0px;
+    border-radius: 0px;
+}
+
+/*contenedor del menu*/
+.container-fluid {
+    width: 75%;
+}
+
+/*color,tamaño de letra del menu de navegacion*/
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    text-align: center;
+    font-family: fuenteNav;
+    font-size: 200%;
+}
+
+/*color,tamaño de letra del menu de navegacion cuando tiene el foco o es visitado*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/*fondo de menu de navegacion al ser visitado*/
+.navbar-default .navbar-nav > li:hover {
+    color: blue;
+    background-color: #030F05;
+    _opacity: 0.5;
+}
+
+/*tamaño de cada li*/
+.navbar-nav > li {
+    width: 25%;
+}
+
+/*quitar en escritoorio media y pequeño(tablets y movil) el posicionamiento a la izquierda*/
+.navbar-nav {
+    float: none;
+}
+
+/*color de li activo*/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #030F05;
+}
+
+/*posicion tamaño alineacion de la fuente del contenedor de las redes sociales*/
+.social {
+    padding-top: 1%;
+    text-align: center;
+}
+
+/*posicion tamaño alineacion de la fuente,bordes,fondo,sombras,tamaño de fuete del os links del contenedor de las redes sociales*/
+.social .link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 9%;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px dashed white;
+    background-clip: content-box;
+    padding: 3px;
+    transition: .5s;
+    color: #D7D0BE;
+    margin-left: 0px;
+    margin-right: 8px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+}
+
+/*posicionamiento,alineacion de la fiuente,animacion del contenedor de iconos*/
+.social .link span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*color, animacion de los links visitados del contenedor de redes sociales*/
+.social .link:hover {
+    padding: 10px;
+    color: white;
+    margin-left: -5px;
+    transform: translateX(10px) rotate(360deg);
+}
+
+/*color de letra de los links de redes sociales*/
+.social .link.google-plus, .social .link.twitter, .social .link.facebook,
+.social .link.instagram {
+    color: white;
+}
+
+/*fondo  del link goolge*/
+.social .link.google-plus {
+    background-color: #ff0000;
+}
+
+/*fondo  del link twitter*/
+.social .link.twitter {
+    background-color: #42cbff;
+}
+
+/*fondo  del link facebook*/
+.social .link.facebook {
+    background-color: #3B5998;
+}
+
+/*fondo  del link instagram*/
+.social .link.instagram {
+    background-color: #a05f32;
+}
+
+/*tamaño para  pantallas con un maximo de 786px*/
+@media (max-width: 768px) {
+    .social .link {
+        width: 5%;
+    }
+}
+
+/*tamaño para pantallas con un maximo de 980px*/
+@media (max-width: 980px) {
+    .social .link {
+        width: 5%;
+    }
+}
+
+/*tamaño para pantallas con minimo 981px*/
+@media (min-width: 981px) {
+    .social .link {
+        width: 9%;
+    }
+}
+
+/*tamaño de cada li para tablet y moviles*/
+@media (max-width: 768px) {
+    .navbar-nav > li {
+        width: 100%;
+    }
+
+    /*color,tamaño de letra del menu de navegacion*/
+    .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+        text-align: left;
+        font-family: fuenteNav;
+        font-size: 150%;
+    }
+
+    /*contenedor del menu*/
+    .container-fluid {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 5rem;
+    }
+}
+
+/*tamaño de letra del header para  moviles*/
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+/*tamaño de letra del header para tablet y moviles*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 5rem;
+    }
+}
+
+/*tamaño de letra del header para  moviles*/
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+    }
 }
