@@ -1,41 +1,243 @@
-#div_animacion {
-    background-color: red;
-
+@font-face {
+    font-family: PaintTheCity;
+    src: url("../fonts/Paint%20the%20town.ttf");
 }
 
-@keyframes animacion {
-    0% {
-        background-color: red
+#div_animacion {
+    position: relative;
+    background-image: url("../img/animacion/fondo.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#div_animacion h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+#div_animacion h2 {
+    font-size: 2.3rem;
+    color: white;
+}
+
+#hierba {
+    position: absolute;
+    top: 258px;
+    background-image: url("../img/animacion/hierba.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 11%;
+}
+
+#poste {
+    position: absolute;
+    right: 0%;
+    top: -100%;
+    transform: rotate(360deg);
+    background-image: url("../img/animacion/poste.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 4%;
+    padding-bottom: 25%;
+}
+
+.animacion_poste {
+    animation-name: desplazamiento_poste;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes desplazamiento_poste {
+    75% {
+        transform: rotate(2deg);
+        top: 27%;
+        right: 48%;
+
+    }
+    92% {
+        transform: rotate(2deg);
     }
     100% {
-        background-color: yellow
+        transform: rotate(10deg);
+        top: 27%;
+        right: 48%;
     }
 }
 
-.animacion {
-    animation-name: animacion;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-}
-
-#cuadrado {
+#madera_grande {
     position: absolute;
-    left: 0px;
-    background-color: blue;
-    height: 100px;
-    width: 100px;
+    top: -25%;
+    right: 40%;
+    background-image: url("../img/animacion/tabla_grande.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1.5%;
+    width: 20%;
 }
 
-.animacion_cuadrado {
-    animation-name: animacion_cuadrado;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-direction: alternate;
+.animacion_madera_grande {
+    animation-name: desplazamiento_madera_grande;
+    animation-duration: 1s;
+    animation-delay: 2.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
-@keyframes animacion_cuadrado {
-    0%{left: 0px;}
-    100%{left: 100%;}
+
+@keyframes desplazamiento_madera_grande {
+    50% {
+        transform: scale(1.5, 1.5)
+    }
+    95% {
+        top: 31%;
+
+    }
+    100% {
+        top: 31%;
+
+    }
 }
+
+#titulo_nature_path {
+    text-align: center;
+    color: white;
+    font-family: PaintTheCity;
+}
+
+.animacion_titulo_nature, .animacion_titulo_path {
+    letter-spacing: 7px;
+}
+
+#planta1 {
+    opacity: 0;
+    position: absolute;
+    top: 49%;
+    left: 46%;
+    width: 8%;
+    padding-bottom: 3%;
+    background-image: url("../img/animacion/flores/flor1.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.animacion_planta1 {
+    animation-name: mostrarDiv;
+    animation-duration: 3s;
+    animation-delay: 6.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#planta3 {
+    opacity: 0;
+    position: absolute;
+    top: 27%;
+    left: 41%;
+    width: 20%;
+    padding-bottom: 10%;
+    background-image: url("../img/animacion/flores/flor3.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.animacion_planta3 {
+    animation-name: mostrarDiv;
+    animation-duration: 1.7s;
+    animation-delay: 3.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#planta4 {
+    opacity: 0;
+    position: absolute;
+    top: 27%;
+    left: 39%;
+    width: 7%;
+    padding-bottom: 13%;
+    background-image: url("../img/animacion/flores/flor4.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.animacion_planta4 {
+    animation-name: mostrarDiv;
+    animation-duration: 2s;
+    animation-delay: 4.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#planta5 {
+    opacity: 0;
+    position: absolute;
+    top: 41%;
+    left: 47.5%;
+    width: 4%;
+    padding-bottom: 15%;
+    background-image: url("../img/animacion/flores/flor5.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.animacion_planta5 {
+    animation-name: mostrarDiv;
+    animation-duration: 1.5s;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mostrarDiv {
+    100% {
+        opacity: 1
+    }
+}
+
+#promos {
+    margin-top: 4%;
+}
+
+
+
+#promo_rutas, #galeria {
+    opacity: 0;
+    border-radius: 5px;
+    background-color: #030F05;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.animacion_txt_emergente {
+    animation-name: mostrarDiv;
+    animation-duration: 2s;
+    animation-delay: 6.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

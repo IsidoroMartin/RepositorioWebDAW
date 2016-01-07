@@ -1055,15 +1055,15 @@
                 a.$Delay(b, k.$Interval)
             };
         var div_animacion = document.getElementById("div_animacion");
-        var cuadrado = document.getElementById("cuadrado");
+        //var cuadrado = document.getElementById("cuadrado");
         var animacion_on = div_animacion.style.left == "0px" && div_animacion.className == "ready";
         if (animacion_on) {
-            cuadrado.className = "animacion_cuadrado";
+            //cuadrado.className = "animacion_cuadrado";
             //div_animacion.style.animationPlayState = "running";
             //div_animacion.className = "animacion";
 
         } else {
-            cuadrado.className = "";
+            //cuadrado.className = "";
         }
         /* Función que se encarga de pasar las imagenes */
         function K() {

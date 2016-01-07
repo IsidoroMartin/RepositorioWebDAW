@@ -26,8 +26,10 @@ Descripcion=
 /*****Menu nav*********/
 /*color de fondo del menu de navegacion*/
 .navbar-default {
-    background-color:#024423;
-    border-color: #E7E7E7;
+    background-color: #024423;
+    /*border-color: #E7E7E7;*/
+    border: 0px;
+    border-radius: 0px;
 }
 
 /*contenedor del menu*/
@@ -36,7 +38,7 @@ Descripcion=
 }
 
 /*color,tamaño de letra del menu de navegacion*/
- .navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a {
     color: #ffffff;
     text-align: center;
     font-family: fuenteNav;
@@ -52,9 +54,10 @@ Descripcion=
 /*fondo de menu de navegacion al ser visitado*/
 .navbar-default .navbar-nav > li:hover {
     color: blue;
-    background-color:#030F05;
+    background-color: #030F05;
     _opacity: 0.5;
 }
+
 /*tamaño de cada li*/
 .navbar-nav > li {
     width: 25%;
@@ -62,25 +65,27 @@ Descripcion=
 
 /*tamaño de cada li para tablet y moviles*/
 @media (max-width: 767px) {
-.navbar-nav > li {
-    width: 100%;
-}
-/*color,tamaño de letra del menu de navegacion*/
- .navbar-default .navbar-nav > li > a {
-    color: #ffffff;
-    text-align: left;
-    font-family: fuenteNav;
-    font-size: 150%;
-}
-/*contenedor del menu*/
-.container-fluid {
-    width: 100%;
-}
+    .navbar-nav > li {
+        width: 100%;
+    }
+
+    /*color,tamaño de letra del menu de navegacion*/
+    .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+        text-align: left;
+        font-family: fuenteNav;
+        font-size: 150%;
+    }
+
+    /*contenedor del menu*/
+    .container-fluid {
+        width: 100%;
+    }
 }
 
 /*quitar en escritoorio media y pequeño(tablets y movil) el posicionamiento a la izquierda*/
 .navbar-nav {
-    float:none;
+    float: none;
 }
 
 /*color de li activo*/
@@ -88,10 +93,11 @@ Descripcion=
     color: #ffffff;
     background-color: #030F05;
 }
+
 /*fuente */
 @font-face {
-	font-family: fuenteNav;
-	src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf");
-	font-weight: 400;
+    font-family: fuenteNav;
+    src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf");
+    font-weight: 400;
 }
 

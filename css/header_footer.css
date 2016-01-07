@@ -30,23 +30,40 @@ Descripcion=
 /***********header*****************/
 
 /*tamaño posicion y fuente para el titulo de la cabecera*/
-
 header h1 {
-    font-size: 8rem;
-    font-family: fuenteHeader;
+	font-size: 8rem;
+	font-family: fuenteHeader;
+    font-weight: normal;
 }
-
 /*color para el titulo de la cabecera (solo la parte nature)*/
-header span.colorGreen {
+header span.colorGreen{
     color: #024423;
 }
-
 /*color para el titulo de la cabecera (solo la parte Path)*/
-header span.colorYellow {
+header span.colorBrown{
     /*color: #808040;*/
-    color: #808040;
+    color: #805F40;
 }
 
+/*padding izquierdo para el logo*/
+.logo{
+	padding-left: 4.5%;
+}
+
+/*tamaño de letra del header para tablet y moviles*/
+@media (max-width: 768px) {
+	header h1{
+		font-size: 5rem;
+	}
+}
+/*tamaño de letra del header para  moviles*/
+@media (max-width: 480px) {
+	header h1 {
+		font-size: 3rem;
+	}
+}
+/**********footer*****************/
+/*fondo y altura del footer*/
 footer {
     font-family: Arial;
 }
@@ -66,7 +83,7 @@ footer a {
 
 /*margen arriba del parrafo */
 div.copyright p {
-    margin-bottom: 0.5%;
+	margin-bottom: 0.5%;
 }
 
 /*centrado y tamaño de la fuente de las listas del footer */
@@ -77,7 +94,7 @@ div.linksfooter4 ul li {
     font-size: 1.2rem;
 }
 
-/*color de links al posicinar el raton encima */
+/*color de links visitados */
 .linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
 .linksfooter4 a:hover {
     color: #024423;

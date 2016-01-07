@@ -15,8 +15,11 @@ html {
 }
 
 h1, h2, h3, h4 {
-    font-weight: bold;
     color: #024423;
+}
+
+h2, h3, h4 {
+    font-weight: bold;
 }
 
 p {
@@ -38,7 +41,7 @@ header div.col-md-12 {
 
 #footer-img {
     background-image: url("../img/footer-img.png");
-    background-size: 100% auto;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding-bottom: 10%;
 }
