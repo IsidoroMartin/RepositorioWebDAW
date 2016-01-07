@@ -146,7 +146,7 @@ Descripcion= Estilos para la animación de la página principal
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación que muestra la planta numero 1*/
 .animacion_planta1 {
     animation-name: mostrarDiv;
     animation-duration: 2s;
@@ -155,6 +155,7 @@ Descripcion= Estilos para la animación de la página principal
     animation-fill-mode: forwards;
 }
 
+/*Posiciono la planta 3  con opacidad 0 que se visualizará posteriormente*/
 #planta3 {
     opacity: 0;
     position: absolute;
@@ -166,7 +167,7 @@ Descripcion= Estilos para la animación de la página principal
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación que muestra la planta numero 3*/
 .animacion_planta3 {
     animation-name: mostrarDiv;
     animation-duration: 1.7s;
@@ -174,7 +175,7 @@ Descripcion= Estilos para la animación de la página principal
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Posiciono la planta 4 con opacidad 0 que se visualizará posteriormente*/
 #planta4 {
     opacity: 0;
     position: absolute;
@@ -186,7 +187,7 @@ Descripcion= Estilos para la animación de la página principal
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación que muestra la planta numero 4*/
 .animacion_planta4 {
     animation-name: mostrarDiv;
     animation-duration: 2s;
@@ -194,7 +195,7 @@ Descripcion= Estilos para la animación de la página principal
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Posiciono la planta 5  con opacidad 0 que se visualizará posteriormente*/
 #planta5 {
     opacity: 0;
     position: absolute;
@@ -206,7 +207,7 @@ Descripcion= Estilos para la animación de la página principal
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación que muestra la planta numero 5*/
 .animacion_planta5 {
     animation-name: mostrarDiv;
     animation-duration: 1.5s;
@@ -214,17 +215,17 @@ Descripcion= Estilos para la animación de la página principal
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Keyframes que se encargan de mostrar el div*/
 @keyframes mostrarDiv {
     100% {
         opacity: 1
     }
 }
-
+/*Posiciono los letreros de publicidad*/
 #promos {
     margin-top: 2%;
 }
-
+/*Agrupo propiedades comunes a ambos div de publi*/
 #promo_rutas, #galeria {
     opacity: 0;
     border-radius: 5px;
@@ -232,7 +233,7 @@ Descripcion= Estilos para la animación de la página principal
     background: rgba(0, 0, 0, .7);
     color: white;
 }
-
+/*Clase que se aplica cada vez que se inicia la animación que muestra los divs de publicidad*/
 .animacion_txt_emergente {
     animation-name: mostrarTxtEmergente;
     animation-duration: 1s;
@@ -240,7 +241,7 @@ Descripcion= Estilos para la animación de la página principal
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
+/*Keyframes que se encargan de mostrar el div de publicidad desplazandolo un 2% hacia abajo*/
 @keyframes mostrarTxtEmergente {
     100% {
         margin-top: 3%;
