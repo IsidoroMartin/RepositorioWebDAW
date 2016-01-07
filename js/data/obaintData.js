@@ -180,7 +180,7 @@ function procesarFiltrosPintarFiltrado(nombre, dificultad, tipo, distancia, ubic
     }
 
     if (listaFiltrada.length == 0) {
-        tituloResultados = "No hay ninguna ruta que cumpla los criterios establecidos, mostrando las rutas más populares";
+        tituloResultados = "No hay ninguna ruta que cumpla los criterios establecidos.<br><span style='text-decoration:underline'>Mostrando las rutas más populares</span>";
         listaFiltrada = obtenerRutasPopulares();
     }
     else
