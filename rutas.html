@@ -3,7 +3,7 @@ Autor= Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
 Fecha= 18 de noviembre. de 2015
 Licencia= gp130
 Version= 1.0
-Descripcion= Página contacto que contiene el formulario
+Descripcion= Página que contiene las rutas posibles que puedes realizar con NaturePath.
 -->
 <!--
   Copyright (C) 2015 Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
@@ -97,7 +97,7 @@ Descripcion= Página contacto que contiene el formulario
 <div class="container col-md-12">
     <div class="row">
         <div id="fondo-filtro">
-            <form class="form-inline" role="form" id="formulario-filtro">
+            <form class="form-inline" role="form" id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
                 <!-- Formulario de filtros | La clase sr-only es para hacer el display del nombre de la ruta en pantallas que no puedan ver el placeholder-->
                 <div class="form-group">
                     <label for="buscador" class="sr-only">Nombre Ruta</label> <br>
@@ -275,7 +275,7 @@ Descripcion= Página contacto que contiene el formulario
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/data/obaintData.js"></script>
+<script src="js/data/obtainData.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 </body>

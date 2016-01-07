@@ -37,8 +37,8 @@ var divPaginacion = null;
 var indicePosMostrar = 0;
 
 window.onload = function init() {
-    obtenerRutas(); //obtengo las rutas y van a la variable lista rutas
     divsDeRutas = document.getElementsByClassName("rutas-posibles"); //obtengo los div de rutas (Donde las rutas se irán mostrando)
+    obtenerRutas(); //obtengo las rutas y van a la variable lista rutas
     pintarRutas(obtenerRutasPopulares()); //Pinto las rutas más populares
 };
 
@@ -47,17 +47,27 @@ window.onload = function init() {
  * array.
  */
 function obtenerRutas() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            /* Obtengo un array con las rutas */
-            listaRutas = JSON.parse(xhttp.responseText);
+    try {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                /* Obtengo un array con las rutas */
+                listaRutas = JSON.parse(xhttp.responseText);
+            }
+        };
+        xhttp.open("GET", "js/data/rutas.json", false);
+        xhttp.send();
+    } catch (err) {
+        for (var i = 0; i < divsDeRutas.length; i++) {
+            divsDeRutas[i].innerHTML = "<h1 style='height:100px;'>Recuerda ejecutarme en un servidor!!!</h1>";
         }
-    };
-    xhttp.open("GET", "js/data/rutas.json", false);
-    xhttp.send();
+    }
 }
 
+/**
+ * Esta función obtiene las rutas populares
+ * @returns {Array}
+ */
 function obtenerRutasPopulares() {
     //Me creo una lista donde añadiré las rutas populares
     var listaFiltrada = [];
@@ -266,6 +276,17 @@ function mostrarRutasAnteriores() {
         divPaginacion.innerHTML += "<span onclick='mostrarRutasAnteriores()' style='float:left'>Anterior</span>";
     }
     pintarRutas(listaFiltered.slice(indicePosMostrar - 6, listaFiltered.length));
+}
+
+/***
+ * Esta función aprovecha el submit que hace al pulsar la tecla intro los formularios para filtrar las rutas.
+ * Siempre devuelve false, porque no quiero que la página se recargue (Ya que todo se encuentra en local).
+ * @returns {boolean}
+ */
+function comprobarBuscar(){
+    mostrarResultadosFiltrados();
+    //No quiero que nunca se haga el submit (Todo está en local).
+    return false;
 }
 
 /*Esta función esllamada desde pintar rutas para determinar el color que debe llevar el parametro mostrado*/
