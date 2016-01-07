@@ -303,7 +303,7 @@ ol.breadcrumb a {
 }
 
 /*tamaño de cada li para tablet y moviles*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-nav > li {
         width: 100%;
     }
