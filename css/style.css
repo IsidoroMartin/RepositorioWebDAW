@@ -1,10 +1,6 @@
 /*fuente */
 
-@font-face {
-    font-family: JosefinSans-Regular;
-    src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf");
-    font-weight: 400;
-}
+
 
 html {
     font-size: 62.5%;
