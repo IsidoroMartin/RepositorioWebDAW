@@ -1,104 +1,136 @@
+/*
+Autor= Yesica Rojas
+Fecha= 26 de nov. de 2015
+Licencia=  gp130
+Version= 1.0
+Descripcion= Estilos para la página de contacto
+-->
+<!--
+  Copyright (C) 2015 Yesica Rojas
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 /*fondo del contenedor principal*/
-.fondoForm{
-	background-image: url("../img/fondoContacto.jpg");
-	_opacity:0.4;
+.fondoForm {
+    background-image: url("../img/fondoContacto.jpg");
+    _opacity: 0.4;
 }
 
 /*quitar el padding al contedor de 12 columnas y a la clase container*/
-.col-md-12,.container{
+.col-md-12, .container {
     padding-right: 0px;
     padding-left: 0px;
 }
+
 /*color y ancho de la fuente de los label*/
 label {
-   color:#ffffff;
+    color: #ffffff;
     font-weight: normal;
 }
 
 /*margen de las filas*/
 .row {
-    margin-right: 15px;  
+    margin-right: 15px;
 }
 
 /*margen bottom de los input telefonomovil y asunto*/
-#telefonoMovil,#asunto {
+#telefonoMovil, #asunto {
     margin-bottom: 15px;
 }
-/*tamaño de fuente de la clase form-control*/  
+
+/*tamaño de fuente de la clase form-control*/
 .form-control {
-	font-size: 16px;
+    font-size: 16px;
 }
+
 /*padding del contenedor de 6 columnas*/
-.col-xs-6{
-   padding-right: 1px;
+.col-xs-6 {
+    padding-right: 1px;
     padding-left: 1px;
 }
+
 /*padding del formulario */
 .form-box {
-	padding-top: 40px;
-	padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 /*cabecera del formulario*/
 .form-top {
-	overflow: hidden;
-	padding: 0 25px 2px 25px;
-	background: #444;
-	background: rgba(0, 0, 0, 0.35);
-	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
-	text-align: left;
+    overflow: hidden;
+    padding: 0 25px 2px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.35);
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
 }
 
 .form-top-left {
-	float: left;
-	width: 75%;
-	padding-top: 25px;
+    float: left;
+    width: 75%;
+    padding-top: 25px;
 }
 
-.form-top-left h3 { margin-top: 0; color: #fff; }
-.form-top-left p { opacity: 0.8; color: #fff; }
+.form-top-left h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.form-top-left p {
+    opacity: 0.8;
+    color: #fff;
+}
 
 .form-top-right {
-	float: left;
-	width: 25%;
-	padding-top: 5px;
-	font-size: 66px;
-	color: #fff;
-	line-height: 100px;
-	text-align: right;
-	opacity: 0.3;
+    float: left;
+    width: 25%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #fff;
+    line-height: 100px;
+    text-align: right;
+    opacity: 0.3;
 }
 
 .form-bottom {
-	padding: 25px 25px 30px 25px;
-	background: #444;
-	background: rgba(0, 0, 0, 0.3);
-	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
-	text-align: left;
+    padding: 25px 25px 30px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
 }
 
 /*alto del area de texto*/
 .form-bottom form textarea {
-	height: 100px;
+    height: 100px;
 }
 
 /* Retina-ize images/icons */
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-	
-	
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
+
 }
 
 /*margen fondo bordes ancho,tamaño color de fuente, bordes de las cajas de texto, tel, email, textarea */
-input[type="text"], 
-textarea, 
-textarea.form-control,input[type="tel"],input[type="email"]{
+input[type="text"],
+textarea,
+textarea.form-control, input[type="tel"], input[type="email"] {
     margin: 0;
     vertical-align: middle;
     background: #fff;
@@ -107,37 +139,54 @@ textarea.form-control,input[type="tel"],input[type="email"]{
     font-size: 16px;
     font-weight: 300;
     color: #000000;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
 }
 
 /*padding del texarea*/
-textarea, 
+textarea,
 textarea.form-control {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
 }
 
 /**/
-input[type="text"]:focus, 
-textarea:focus, 
+input[type="text"]:focus,
+textarea:focus,
 textarea.form-control:focus {
-	outline: 0;
-	background: #fff;
+    outline: 0;
+    background: #fff;
     border: 3px solid #fff;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
-input[type="text"]:-moz-placeholder, textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; }
-input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; }
-input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
+input[type="text"]:-moz-placeholder, textarea:-moz-placeholder, textarea.form-control:-moz-placeholder {
+    color: #888;
+}
 
+input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
+    color: #888;
+}
+
+input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
+    color: #888;
+}
 
 /*alto,ancho,pading,fuente,color,fondo,bordes,sombra del boton*/
 button.btn {
-	height: 50px;
+    height: 50px;
     margin-left: 40%;
     padding: 0 20px;
     vertical-align: middle;
@@ -148,21 +197,49 @@ button.btn {
     font-weight: 300;
     line-height: 50px;
     color: #fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
     text-shadow: none;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
 }
 
-button.btn:hover{
-    opacity:0.8;
+button.btn:hover {
+    opacity: 0.8;
 }
 
 /*cambios de opacidad color cuando el boton es visitado*/
-button.btn:hover { opacity: 0.6; color: #fff; }
+button.btn:hover {
+    opacity: 0.6;
+    color: #fff;
+}
 
-button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+button.btn:active {
+    outline: 0;
+    opacity: 0.6;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
-button.btn:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+button.btn:focus {
+    outline: 0;
+    opacity: 0.6;
+    background: #19b9e7;
+    color: #fff;
+}
 
-button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+button.btn:active:focus, button.btn.active:focus {
+    outline: 0;
+    opacity: 0.6;
+    background: #19b9e7;
+    color: #fff;
+}
