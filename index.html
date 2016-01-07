@@ -13,18 +13,18 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <!--<link href="css/jumbotron.css" rel="stylesheet">-->
 
     <!-- Hoja de estilos para el menu -->
     <link href="css/menu.css" rel="stylesheet">
+    <!--Hoja de estilos para el slider-->
     <link href="css/slider.css" rel="stylesheet">
-
     <!-- Hoja de estilos para header y footer -->
     <link href="css/header_footer.css" rel="stylesheet">
     <link href="css/redesSociales.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+
     <link href="css/animacion.css" rel="stylesheet">
 
 
@@ -35,12 +35,11 @@
     <!-- cabecera  -->
     <div class="row">
         <header>
-            <div class="logo col-xs-2">
-                <img src="img/logo.png" class="img-responsive">
+            <div class="logo col-xs-5">
+                <img src="img/logo2.png" class="img-responsive">
             </div>
-            <div class="nombre col-xs-10">
-                <h1><span class="colorGreen">Nature</span>
-                    <span class="colorYellow">Path</span></h1>
+            <div class="nombre col-xs-7">
+                <h1><span class="colorGreen">Nature</span><span class="colorBrown">Path</span></h1>
             </div>
         </header>
     </div>
@@ -84,7 +83,7 @@
 <!--
     @Isi
     El slider va moviendo las imagenes desde la derecha a la izquierda (desde 1300 hasta 0 y de ahí a -1300)
-    Para la animación detectar en botones de flechas o del panel de navegacion de el slider o Averiguar cuando se efectúa el paso de imagen
+    Para la animacion detectar en botones de flechas o del panel de navegacion de el slider o Averiguar cuando se efectúa el paso de imagen
     Tambien podemos saber cual es la imagen actual sabiendo cual es el elemento de el navegador de el slider que tiene la clase av
 -->
 </div>
@@ -99,16 +98,43 @@
         <!-- Slides Container -->
         <div u="slides"
              style="cursor: pointer; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
-            <div>
-                <img u="image" src="./img/slider/imagenes/1.png"/>
-            </div>
-            <div>
-                <img u="image" src="./img/slider/imagenes/1.png"/>
-            </div>
             <div id="div_animacion">
-                <div id="cuadrado"></div>
+                <div id="reload"></div>
+                <div id="cartel">
+                    <div id="poste" class="animacion_poste"></div>
+                    <div id="madera_grande" class="animacion_madera_grande">
+                        <h1 id="titulo_nature_path">
+                            <div class="animacion_titulo_nature colorGreen">NATURE</div>
+                            <div class="animacion_titulo_path colorYellow">PATH</div>
+                        </h1>
+                    </div>
+                    <div id="planta1" class="animacion_planta1"></div>
+                    <div id="planta3" class="animacion_planta3"></div>
+                    <div id="planta4" class="animacion_planta4"></div>
+                    <div id="planta5" class="animacion_planta5"></div>
+                </div>
+                <div id="hierba"></div>
+                <div class="container">
+                    <div class="row" id="promos">
+                        <div id="promo_rutas" class="col-lg-3 col-lg-offset-1  col-md-4  col-xs-4  animacion_txt_emergente">
+                            <h2>¡Aprovecha nuestra oferta de navidad!</h2>
+                            <p>Si contratas una ruta antes de el 6 de enero te descontaremos un 20% del precio
+                                total</p>
+                        </div>
+                        <div id="galeria"
+                             class="col-lg-3 col-lg-offset-4  col-md-offset-3 col-md-4 col-xs-offset-4 col-xs-4 animacion_txt_emergente">
+                            <h2>¡Visita nuestra galería!</h2>
+                            <p>Allí encontrarás fotos de todos nuestros viajes, nuestra historia</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+            <div>
+                <img u="image" src="./img/slider/imagenes/1.png"/>
+            </div>
+            <div>
+                <img u="image" src="./img/slider/imagenes/1.png"/>
+            </div>
         </div>
         <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
             <!-- bullet navigator item prototype -->
@@ -123,12 +149,13 @@
         <!--#endregion Arrow Navigator Skin End -->
     </div>
     <!-- Jssor Slider End -->
-
 </div>
+
+
 <div id="home-texto" class="container">
     <div class="row">
         <div class="col-lg-3 col-lg-offset-1 col-md-4 col-xs-12">
-            <h2>Heading</h2>
+            <h2>Sobre nosotros</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce
                 dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
                 ut fermentum massa justo sit amet risus.</p>
@@ -139,7 +166,7 @@
 
         </div>
         <div class="col-lg-3 col-lg-offset-1 col-md-4 col-xs-12">
-            <h2>Heading</h2>
+            <h2>Descuentos a grupos</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
                 egestas eget quam. Vestibulum id ligula porta felis euismod semper.
             </p>

@@ -34,14 +34,18 @@ header h1 {
 	font-size: 8rem;
 	font-family: fuenteHeader;
 }
+
+h1{
+	font-weight: normal;
+}
 /*color para el titulo de la cabecera (solo la parte nature)*/
 header span.colorGreen{
 	color: #024423;
 }
 /*color para el titulo de la cabecera (solo la parte Path)*/
-header span.colorYellow{
+header span.colorBrown{
 	/*color: #808040;*/
-	color: #808040;
+	color: #805F40;
 }
 
 /*padding izquierdo para el logo*/
@@ -80,6 +84,8 @@ div.linksfooter4 ul li {
 	text-align: center;
 	font-size: 1.2rem;
 }
+
+
 
 /*color de links del footer */
 footer a {
