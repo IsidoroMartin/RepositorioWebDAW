@@ -101,7 +101,7 @@ div.btn-rutas button:hover {
     font-size: 2.5rem;
 }
 
-/* tamaño información rutas*/
+/* Tamaño información rutas*/
 .informacion-rutas {
     font-size: 1.8rem;
     line-height: 35px;
@@ -115,7 +115,7 @@ div.btn-rutas button:hover {
     }
 
 }
-/*Tamño imagen de fondo para el filtro en moviles*/
+/*Tamaño imagen de fondo para el filtro en moviles*/
 @media only screen and (max-width: 767px) {
     #fondo-filtro {
         height: 35%;
@@ -127,7 +127,7 @@ div.btn-rutas button:hover {
     }
 }
 
-/*Tamño imagen de fondo para el filtro en tablets*/
+/*Tamaño imagen de fondo para el filtro en tablets*/
 @media only screen and (max-width: 1100px) {
     #fondo-filtro {
         height: 20%;
