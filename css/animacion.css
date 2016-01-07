@@ -21,6 +21,7 @@ Descripcion= Estilos para la animación de la página principal
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 /*Importo la tipografía necesaria*/
 @font-face {
     font-family: PaintTheCity;
@@ -235,7 +236,7 @@ Descripcion= Estilos para la animación de la página principal
 .animacion_txt_emergente {
     animation-name: mostrarTxtEmergente;
     animation-duration: 1s;
-    animation-delay: 7s;
+    animation-delay: 7.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
