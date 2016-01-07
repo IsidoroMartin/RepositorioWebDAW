@@ -23,46 +23,48 @@
 */
 
 /* Titulo rutas buscadas*/
-#tit-rutas-buscadas{
-    margin:0px;
+#tit-rutas-buscadas {
+    margin: 0px;
 }
 
 /* El texto del formulario aparecerá centrado*/
 #formulario-filtro {
-	text-align: center;
+    text-align: center;
 }
+
 /* todos los elementos del formulario tendrán este margen*/
-#formulario-filtro>* {
-	margin: 10px 13px;
+#formulario-filtro > * {
+    margin: 10px 40px;
 }
+
 /*Estilo botón del filtro*/
 #btn-filtro {
-	margin-left: 20px;
+    margin-left: 20px;
     background-color: #024423;
     border-color: #E7E7E7;
 }
 
 /*Hover del botón de filtro*/
 #btn-filtro:hover {
-	opacity: 0.8;
+    opacity: 0.8;
 }
 
 /*El fondo de los filtros*/
 #fondo-filtro {
-	background-image: url("../img/fondo_buscador_rutas_guiadas.png");
-	height: 100px;
+    background-image: url("../img/fondo_buscador_rutas_guiadas.png");
+    height: 100px;
 }
 
 /*Botones siguiente y anterior paginación rutas*/
-#paginacion span{
+#paginacion span {
     font-weight: 200;
     font-size: 1.5rem;
-    color:black;
+    color: black;
     cursor: pointer;
 }
 
 /*Botones siguiente y anterior paginación rutas hover*/
-#paginacion span:hover{
+#paginacion span:hover {
     font-weight: 300;
     font-size: 1.6rem;
 }
@@ -71,57 +73,68 @@
 div.btn-rutas button {
     background-color: #024423;
     border-color: #E7E7E7;
-	width:48%;
-}
-/*hover Botones de contratar y más imagenes de cada ruta*/
-div.btn-rutas button:hover {
-	background-color: #024423;
-	border-color: #E7E7E7;
-	opacity: 0.8;
+    width: 48%;
 }
 
+/*hover Botones de contratar y más imagenes de cada ruta*/
+div.btn-rutas button:hover {
+    background-color: #024423;
+    border-color: #E7E7E7;
+    opacity: 0.8;
+}
 
 /*Estilo de las rutas */
 .rutas-posibles {
-	margin-top: 20px;
-	height: 35%;
-    margin-bottom:1%;
+    margin-top: 20px;
+    height: 35%;
+    margin-bottom: 1%;
 }
 
 /* Estilo de las imagenes de las rutas */
 .rutas-posibles img {
-	width: 200px;
-	height: 130px;
+    width: 200px;
+    height: 130px;
 }
 
 /* Tamaño del titulo de las rutas*/
 .rutas-posibles h4 {
-	font-size:2.5rem;
+    font-size: 2.5rem;
 }
 
 /* tamaño información rutas*/
 .informacion-rutas {
-	font-size:1.8rem;
+    font-size: 1.8rem;
     line-height: 35px;
-    margin-top:2%;
+    margin-top: 2%;
 }
 
-
-
-@media only screen and (max-width: 1000px) and (min-width:769px) {
-	#formulario-filtro input, #formulario-filtro select {
-		width: 103px;
-		font-size:0.91rem;
-	}
+@media only screen and (max-width: 1000px) and (min-width: 769px) {
+    #formulario-filtro input, #formulario-filtro select {
+        width: 103px;
+        font-size: 0.91rem;
+    }
 
 }
-
+/*Tamño imagen de fondo para el filtro en moviles*/
 @media only screen and (max-width: 767px) {
-	#fondo-filtro {
-		height: 35%;
-		font-size:0.91rem;
-	}
-	#btn-filtro {
-		margin-top: 20px;
-	}
+    #fondo-filtro {
+        height: 35%;
+        font-size: 0.91rem;
+    }
+
+    #btn-filtro {
+        margin-top: 20px;
+    }
+}
+
+/*Tamño imagen de fondo para el filtro en tablets*/
+@media only screen and (max-width: 1100px) {
+    #fondo-filtro {
+        height: 20%;
+        font-size: 0.91rem;
+    }
+
+    #btn-filtro {
+        margin-top: 20px;
+    }
 }

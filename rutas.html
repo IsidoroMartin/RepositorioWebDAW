@@ -18,6 +18,7 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- CSS página de rutas -->
     <link href="css/rutas.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
 <!-- cabecera  -->
@@ -25,10 +26,10 @@
     <!-- cabecera  -->
     <div class="row">
         <header>
-            <div class="logo col-xs-2">
+            <div id="logo" class="col-xs-5 col-md-2">
                 <img src="img/logo.png" class="img-responsive">
             </div>
-            <div class="nombre col-xs-10">
+            <div id="nombre-empresa" class="col-xs-7 col-md-10">
                 <h1><span class="colorGreen">Nature</span>
                     <span class="colorYellow">Path</span></h1>
             </div>
@@ -60,7 +61,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
                         <li class="active"><a href="rutas.html">Rutas</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -69,7 +70,6 @@
     </div>
 </div>
 <!-- fin menu navegacion  -->
-
 
 <!-- Formulario de Filtros - Juanjo -->
 <div class="container col-md-12">
@@ -134,31 +134,35 @@
     </div>
 </div>
 <!--Contenedor para las migas de pan -->
-    <div id="migas-pan" class="container">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Rutas</li>
-        </ol>
-    </div>
+<div id="migas-pan" class="container">
+    <ol class="breadcrumb">
+        <li><a style="color:darkgreen" href="index.html">Home</a></li>
+        <li class="active">Rutas</li>
+    </ol>
+</div>
 <!-- DIVS DONDE SALDRÁN LAS RUTAS FILTRADAS (La primera vez saldrán las rutas más populares) -->
 <div class="container">
 
     <div class="row">
-        <h2 id="tit-rutas-buscadas" class="col-xs-12">Estas son las rutas más populares....</h2>
-        <!-- Titulo de filtros -->
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
-        </div>
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
-        </div>
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
+        <div class="container">
+            <h2 id="tit-rutas-buscadas" class="col-xs-12">Estas son las rutas más populares....</h2>
+            <!-- Titulo de filtros -->
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
-        </div>
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
-        </div>
-        <div class="col-xs-12 col-sm-4  rutas-posibles">
+        <div class="container">
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+            </div>
         </div>
     </div>
     <!-- En este div saldrá el botón de siguiente y de anterior si procede en la paginación de rutas -->
@@ -168,65 +172,80 @@
 </div>
 </div>
 
+<!-- /container -->
+<div class="row ">
+    <div id="footer-img" class="col-md-12">
+    </div>
+</div>
 <!-- pie de pagina  -->
-<div class="row">
-    <footer>
+<footer>
+    <div class="container">
         <div class="linksfooter row">
             <div class="linksfooter1 col-md-2 col-sm-6">
                 <ul>
-                    <li><a href="#">Empresa </a></li>
-                    <li><a href="#">Trabaja con Nosotros</a></li>
-                    <li><a href="#">Fundacion </a></li>
+                    <li><a class="link" href="#1">Empresa </a></li>
+                    <li><a class="link" href="#2">Trabaja con Nosotros</a></li>
+                    <li><a class="link" href="#3">Fundacion </a></li>
                 </ul>
             </div>
 
             <div class="linksfooter2 col-md-2 col-sm-6">
                 <ul>
-                    <li><a href="#">Soporte Tecnico</a></li>
-                    <li><a href="#">Site map </a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a class="link" href="#4">Soporte Tecnico</a></li>
+                    <li><a class="link" href="#5">Site map </a></li>
+                    <li><a class="link" href="#6">Cookies</a></li>
                 </ul>
             </div>
 
             <div class="linksfooter3 col-md-2 col-sm-6">
                 <ul>
-                    <li><a href="#">Accesibilidad </a></li>
-                    <li><a href="#">Forma de Pago </a></li>
-                    <li><a href="#">Informacion Legal </a></li>
+                    <li><a class="link" href="#7">Accesibilidad </a></li>
+                    <li><a class="link" href="#8">Forma de Pago </a></li>
+                    <li><a class="link" href="#9">Informacion Legal </a></li>
                 </ul>
             </div>
 
             <div class="linksfooter4 col-md-2 col-sm-6">
                 <ul>
-                    <li><a href="#">Politica De Privacidad </a></li>
-                    <li><a href="#">Gastos De Envio</a></li>
-                    <li><a href="#">Sala De Prensa </a></li>
+                    <li><a class="link" href="#10">Politica De Privacidad </a></li>
+                    <li><a class="link" href="contacto.html">Contacte con nosotros</a></li>
+                    <li><a class="link" href="licencia.html"
+                           onClick="window.open(this.href, this, 'width=600,height=600'); return false;">Licencia </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="social col-md-4 col-sm-12">
-                <a href="http://facebook.com/" class="link facebook"
-                   target="_parent"> <span class="fa fa-facebook-square "></span></a>
-                <a href="https://twitter.com/" class="link twitter"
-                   target="_parent"> <span class="fa fa-twitter"></span>
-                </a> <a href="https://plus.google.com/" class="link google-plus"
-                        target="_parent"> <span class="fa fa-google-plus-square"></span></a>
-                <a href="https://instagram.com/" class="link instagram"
-                   target="_parent"> <span class="fa fa-instagram"></span></a> <a
-                    href="https://youtube.com/" class="link google-plus"
-                    target="_parent"> <span class="fa fa-youtube"></span></a>
+                <a href="http://facebook.com/" class="link facebook" target="_parent">
+                    <span class="fa fa-facebook-square "></span>
+                </a>
+                <a href="https://twitter.com/" class="link twitter" target="_parent"> <span class="fa fa-twitter">
+
+                </span>
+                </a>
+                <a href="https://plus.google.com/" class="link google-plus" target="_parent">
+                    <span class="fa fa-google-plus-square"></span>
+                </a>
+                <a href="https://instagram.com/" class="link instagram" target="_parent">
+                    <span class="fa fa-instagram"></span>
+                </a>
+                <a href="https://youtube.com/" class="link google-plus" target="_parent">
+                    <span class="fa fa-youtube"></span>
+                </a>
             </div>
         </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+        </div>
         <div class="copyright row">
             <div class="col-md-12 col-sm-12">
-                <p>naturepath@naturepath.com 2015 | Todos Los Derechos Reservados.</p>
+                <p>Juan Jose Ramirez | Isidoro Martin | Miguel Cobertera | Yesica Rojas</p>
             </div>
         </div>
-
-    </footer>
-</div>
-
+    </div>
+</footer>
 <!--Fin pie de pagina  -->
 
 

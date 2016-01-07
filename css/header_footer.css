@@ -33,19 +33,16 @@ Descripcion=
 header h1 {
 	font-size: 8rem;
 	font-family: fuenteHeader;
-}
-
-h1{
-	font-weight: normal;
+    font-weight: normal;
 }
 /*color para el titulo de la cabecera (solo la parte nature)*/
 header span.colorGreen{
-	color: #024423;
+    color: #024423;
 }
 /*color para el titulo de la cabecera (solo la parte Path)*/
 header span.colorBrown{
-	/*color: #808040;*/
-	color: #805F40;
+    /*color: #808040;*/
+    color: #805F40;
 }
 
 /*padding izquierdo para el logo*/
@@ -68,8 +65,20 @@ header span.colorBrown{
 /**********footer*****************/
 /*fondo y altura del footer*/
 footer {
-	/*background-image:url("../img/footer_grande.png");*/
-	/*height: 200px;*/
+    font-family: Arial;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/*padding izquierdo para el logo*/
+#logo {
+    margin-top:0.5%;
+}
+
+#nombre-empresa{
+    text-align: center;
 }
 
 /*margen arriba del parrafo */
@@ -80,49 +89,64 @@ div.copyright p {
 /*centrado y tamaño de la fuente de las listas del footer */
 div.linksfooter1 ul li, div.linksfooter2 ul li, div.linksfooter3 ul li,
 div.linksfooter4 ul li {
-	list-style-type: none;
-	text-align: center;
-	font-size: 1.2rem;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
-
-
-/*color de links del footer */
-footer a {
-	color: #ffffff;
-}
 /*color de links visitados */
 .linksfooter1 a:hover, .linksfooter2 a:hover, .linksfooter3 a:hover,
 .linksfooter4 a:hover {
-	color: #477e25;
+    color: #024423;
+    text-decoration: none;
 }
 
 /*fondo posicion color y tamaño de fuente del copyright*/
-.copyright{
-	position:relative;
-	color: #ffffff;
-	top: 65%;
-	font-size: 1.7rem;
-	text-align: center;
+.copyright {
+    position: relative;
+    color: #ffffff;
+    top: 65%;
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 /*fondo, posicion de la fila que contiene los links del footer*/
-.linksfooter{
-	position:relative;
-	top: 65%;
+.linksfooter {
+    position: relative;
+    top: 65%;
 }
 
 footer div.row {
-	margin-right: 0px;
-	margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
+
 /*fondo, posicion de la fila que contiene los links del footer*/
 .linksfooter {
-	position: relative;
-	top: 65%;
+    position: relative;
+    top: 65%;
 }
 
 .padding0 {
-	padding-left: 0px;
-	padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Color de los enlaces del footer visitados*/
+.link:visited {
+    color: gray;
+}
+
+/*tamaño de letra del header para tablet y moviles*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 5rem;
+    }
+}
+
+/*tamaño de letra del header para  moviles*/
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+    }
 }

@@ -1,55 +1,48 @@
+/*fondo del contenedor principal*/
 .fondoForm{
-	background-image: url("../img/1.jpg");
+	background-image: url("../img/fondoContacto.jpg");
+	_opacity:0.4;
 }
 
+/*quitar el padding al contedor de 12 columnas y a la clase container*/
+.col-md-12,.container{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+/*color y ancho de la fuente de los label*/
+label {
+   color:#ffffff;
+    font-weight: normal;
+}
 
-img { max-width: 100%; }
+/*margen de las filas*/
+.row {
+    margin-right: 15px;  
+}
 
-::-moz-selection { background: #19b9e7; color: #fff; text-shadow: none; }
-::selection { background: #19b9e7; color: #fff; text-shadow: none; }
-
-
-.btn-link-1 {
-	display: inline-block;
-	height: 50px;
-	margin: 0 5px;
-	padding: 16px 20px 0 20px;
-	background: #19b9e7;
+/*margen bottom de los input telefonomovil y asunto*/
+#telefonoMovil,#asunto {
+    margin-bottom: 15px;
+}
+/*tamaño de fuente de la clase form-control*/  
+.form-control {
 	font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
-    color: #fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
-.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active { outline: 0; opacity: 0.6; color: #fff; }
-
-.btn-link-2 {
-	display: inline-block;
-	height: 50px;
-	margin: 0 5px;
-	padding: 15px 20px 0 20px;
-	background: rgba(0, 0, 0, 0.3);
-	border: 1px solid #fff;
-	font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
-    color: #fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+/*padding del contenedor de 6 columnas*/
+.col-xs-6{
+   padding-right: 1px;
+    padding-left: 1px;
 }
-.btn-link-2:hover, .btn-link-2:focus, 
-.btn-link-2:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
-
-
-
-
-
+/*padding del formulario */
 .form-box {
 	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
+/*cabecera del formulario*/
 .form-top {
 	overflow: hidden;
-	padding: 0 25px 15px 25px;
+	padding: 0 25px 2px 25px;
 	background: #444;
 	background: rgba(0, 0, 0, 0.35);
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
@@ -84,15 +77,10 @@ img { max-width: 100%; }
 	text-align: left;
 }
 
+/*alto del area de texto*/
 .form-bottom form textarea {
 	height: 100px;
 }
-
-.form-bottom form .input-error {
-	border-color: #19b9e7;
-}
-
-.form-bottom p { opacity: 0.8; color: #fff; }
 
 /* Retina-ize images/icons */
 
@@ -107,25 +95,24 @@ only screen and (                min-resolution: 2dppx) {
 	
 }
 
+/*margen fondo bordes ancho,tamaño color de fuente, bordes de las cajas de texto, tel, email, textarea */
 input[type="text"], 
 textarea, 
-textarea.form-control {
-	height: 50px;
+textarea.form-control,input[type="tel"],input[type="email"]{
     margin: 0;
-    padding: 0 20px;
     vertical-align: middle;
     background: #fff;
     border: 3px solid #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 50px;
-    color: #888;
+    color: #000000;
     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
+/*padding del texarea*/
 textarea, 
 textarea.form-control {
 	padding-top: 10px;
@@ -133,6 +120,7 @@ textarea.form-control {
 	line-height: 30px;
 }
 
+/**/
 input[type="text"]:focus, 
 textarea:focus, 
 textarea.form-control:focus {
@@ -147,14 +135,14 @@ input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder, textar
 input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
 
 
-
+/*alto,ancho,pading,fuente,color,fondo,bordes,sombra del boton*/
 button.btn {
 	height: 50px;
-    margin: 0;
+    margin-left: 40%;
     padding: 0 20px;
     vertical-align: middle;
-    background: #19b9e7;
-    border: 0;
+    background-color: #024423;
+    border-color: #E7E7E7;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -166,6 +154,11 @@ button.btn {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
+button.btn:hover{
+    opacity:0.8;
+}
+
+/*cambios de opacidad color cuando el boton es visitado*/
 button.btn:hover { opacity: 0.6; color: #fff; }
 
 button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }

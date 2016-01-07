@@ -4,9 +4,8 @@
  * Licencia=gp130
  * Version=1.0
  * Descripcion = Obtención de datos y lógica de filtrado y paginción de la página web de rutas
- */
-
-/*
+ *
+ *
  Copyright (C) 2015 Juan José Ramírez Sánchez
 
  This program is free software: you can redistribute it and/or modify
@@ -129,9 +128,9 @@ function filtrarRutasPorDistancia(listaRutas, distancia) {
             && (kilometros >= 3 && kilometros < 6)) {
             rutas.push(listaRutas[i]);
         } else if (distancia == 3
-            && (kilometros >= 6 && kilometros < 10)) {
+            && (kilometros >= 6 && kilometros <= 10)) {
             rutas.push(listaRutas[i]);
-        } else if (distancia == 4 && (kilometros >= 10)) {
+        } else if (distancia == 4 && (kilometros > 10)) {
             rutas.push(listaRutas[i]);
         }
     }
