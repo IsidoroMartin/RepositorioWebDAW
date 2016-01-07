@@ -236,7 +236,7 @@ Descripcion= Estilos para la animación de la página principal
 .animacion_txt_emergente {
     animation-name: mostrarTxtEmergente;
     animation-duration: 1s;
-    animation-delay: 7.8s;
+    animation-delay: 7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
