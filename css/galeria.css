@@ -14,7 +14,6 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
-            background: url('img/a17.png') no-repeat;
             overflow: hidden;
         }
         .jssora05l { background-position: -10px -40px; }
@@ -64,7 +63,6 @@
             height: 68px;
             border: #000 2px solid;
             box-sizing: content-box;
-            background: url('img/t01.png') -800px -800px no-repeat;
             _background: none;
         }
         
