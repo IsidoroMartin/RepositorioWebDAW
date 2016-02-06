@@ -51,7 +51,6 @@
 
 /*El fondo de los filtros*/
 #fondo-filtro {
-    background-image: url("../img/fondo_buscador_rutas_guiadas.png");
     height: 100px;
 }
 
@@ -67,6 +66,10 @@
 #paginacion span:hover {
     font-weight: 300;
     font-size: 1.6rem;
+}
+
+div#fondo-filtro div{
+    margin:20px;
 }
 
 /*Botones de contratar y más imagenes de cada ruta*/
@@ -107,6 +110,7 @@ div.btn-rutas button:hover {
     line-height: 35px;
     margin-top: 2%;
 }
+
 
 @media only screen and (max-width: 1000px) and (min-width: 769px) {
     #formulario-filtro input, #formulario-filtro select {

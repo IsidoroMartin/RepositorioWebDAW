@@ -22,27 +22,17 @@ Descripcion= Estilos para la página de contacto
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*fondo del contenedor principal*/
-.fondoForm {
-    background-image: url("../img/fondoContacto.jpg");
-    _opacity: 0.4;
-}
-
-/*quitar el padding al contedor de 12 columnas y a la clase container*/
-.col-md-12, .container {
-    padding-right: 0px;
-    padding-left: 0px;
-}
 
 /*color y ancho de la fuente de los label*/
 label {
-    color: #ffffff;
+    color: #000;
     font-weight: normal;
+    font-size: 2rem;
 }
 
-/*margen de las filas*/
-.row {
-    margin-right: 15px;
+#envio{
+    margin-top:10px;
+    margin-bottom:30px;
 }
 
 /*margen bottom de los input telefonomovil y asunto*/
@@ -50,6 +40,16 @@ label {
     margin-bottom: 15px;
 }
 
+#errores,#titContacto{
+    padding:0px;
+}
+#titContacto h2{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+#errores a{
+    color:#a94442;
+}
 /*tamaño de fuente de la clase form-control*/
 .form-control {
     font-size: 16px;
@@ -61,10 +61,29 @@ label {
     padding-left: 1px;
 }
 
+/*margen de las filas*/
+.row {
+    margin-right: 15px;
+}
+
+/*fondo del contenedor principal*/
+.fondoForm {
+    background-color: #E5E5E5;
+    border:1px solid #d9d9d9;
+}
+
+/*quitar el padding al contedor de 12 columnas y a la clase container*/
+.col-md-12, .container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
 /*padding del formulario */
 .form-box {
     padding-top: 40px;
     padding-bottom: 20px;
+    _background-color: #805F40;
 }
 
 /*cabecera del formulario*/
@@ -72,7 +91,7 @@ label {
     overflow: hidden;
     padding: 0 25px 2px 25px;
     background: #444;
-    background: rgba(0, 0, 0, 0.35);
+    background:#ffffff;
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
@@ -91,8 +110,8 @@ label {
 }
 
 .form-top-left p {
-    opacity: 0.8;
-    color: #fff;
+    opacity: 0.99;
+    _color: #024423;
 }
 
 .form-top-right {
@@ -109,7 +128,7 @@ label {
 .form-bottom {
     padding: 25px 25px 30px 25px;
     background: #444;
-    background: rgba(0, 0, 0, 0.3);
+    background: #ffffff;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
@@ -128,13 +147,13 @@ label {
 }
 
 /*margen fondo bordes ancho,tamaño color de fuente, bordes de las cajas de texto, tel, email, textarea */
-input[type="text"],
+input,
 textarea,
 textarea.form-control, input[type="tel"], input[type="email"] {
     margin: 0;
     vertical-align: middle;
     background: #fff;
-    border: 3px solid #fff;
+    border: 3px solid rgba(42, 27, 27, 0.38);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -160,16 +179,29 @@ textarea.form-control {
     line-height: 30px;
 }
 
-/**/
-input[type="text"]:focus,
-textarea:focus,
-textarea.form-control:focus {
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select#tipoConsulta,select#asunto,
+textarea,
+textarea.form-control  {
     outline: 0;
     background: #fff;
-    border: 3px solid #fff;
+    border: 1px solid #024423;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+/**/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select#tipoConsulta:focus,select#asunto:focus,
+textarea:focus,
+textarea.form-control:focus {
+    border: 2px solid #024423;
 }
 
 input[type="text"]:-moz-placeholder, textarea:-moz-placeholder, textarea.form-control:-moz-placeholder {
@@ -242,4 +274,7 @@ button.btn:active:focus, button.btn.active:focus {
     opacity: 0.6;
     background: #19b9e7;
     color: #fff;
+}
+.form-control {    border: 3px solid rgba(42, 27, 27, 0.38);
+
 }

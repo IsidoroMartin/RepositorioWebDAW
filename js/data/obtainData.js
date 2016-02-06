@@ -55,8 +55,8 @@ function obtenerRutas() {
                 listaRutas = JSON.parse(xhttp.responseText);
             }
         };
-        xhttp.open("GET", "js/data/rutas.json", false);
-        xhttp.send();
+        xhttp.open("GET", "./js/data/rutas.json", false);
+        xhttp.send(null);
     } catch (err) {
         for (var i = 0; i < divsDeRutas.length; i++) {
             divsDeRutas[i].innerHTML = "<h1 style='height:100px;'>Recuerda ejecutarme en un servidor!!!</h1>";
@@ -297,13 +297,13 @@ function determinarColorLetra(tipoValor, valor) {
         //En el caso de que el valor para mostrar sea dificultad
         case "dificultad":
             if (valor == "Fácil") color = "green"; //Si es fácil mostrara el color verde
-            else if (valor == "Normal") color = "#C5C516"; // si es normal mostrará amarillo
+            else if (valor == "Normal") color = "#00004c"; // si es normal mostrará amarillo
             else  color = "red"; // Si es díficil mostrará rojo
             break;
         //En este caso es igual que el anterior a excepción que el color amarillo solo se muestra si la ruta esta entre 5 y 20 (km)
         case "distancia":
             if (valor < 5) color = "green";
-            else if (valor >= 5 && valor <= 20)color = "#C5C516";
+            else if (valor >= 5 && valor <= 20);
             else color = "red";
             break;
         case "terreno":
