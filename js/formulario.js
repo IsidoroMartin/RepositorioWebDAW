@@ -8,17 +8,17 @@
 
 /*
  Copyright (C) 2015 yesica alexandra rojas
- 
+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
- 
+
  This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- 
+
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -69,8 +69,8 @@ function habilitarTerminosYCondiciones(frm) {
     var asunto = document.getElementById("asunto").selectedIndex;
 
     if (nombre != "" && apellido1 != "" && apellido2 != "" && email != ""
-            && telefonoMovil != "" && descripcion != "" && consulta != 0
-            && asunto != 0) {
+        && telefonoMovil != "" && descripcion != "" && consulta != 0
+        && asunto != 0) {
         frm.terminos.disabled = false;
         return true;
     }
@@ -82,12 +82,12 @@ function habilitarTerminosYCondiciones(frm) {
 // casillla de verificacion esta chekeada
 function activarBoton(frm) {
     var terminos = document.getElementById("terminos");
-        frm.envio.disabled = !habilitarTerminosYCondiciones(frm) && terminos.checked;
+    frm.envio.disabled = !habilitarTerminosYCondiciones(frm) && terminos.checked;
 
 }
 
 /**
- * 
+ *
  * @param {type} nombreCampo
  * @param {type} sintaxis
  * Esta función genera los mensajes de error dinamicamente en el divde errores
@@ -95,9 +95,19 @@ function activarBoton(frm) {
 function mostrarErrors(nombreCampo, sintaxis) {
     var errores = document.getElementById("errores");
     document.getElementById("errores").innerHTML += '<div class="alert alert-danger" role="alert">' +
-            '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' +
-            '<span class="sr-only">Error:</span>' +
-            '<a href="ayuda"> Introduce un ' + nombreCampo + ' válido' + '. ' +
-            sintaxis +
-            '</a></div>';
+        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' +
+        '<span class="sr-only">Error:</span>' +
+        '<a href="ayuda"> Introduce un ' + nombreCampo + ' válido' + '. ' +
+        sintaxis +
+        '</a></div>';
+}
+
+function validar() {
+    var errores = document.getElementById("errores");
+    if (errores.innerHTML == "") { //No hay errores
+        var nombre = document.getElementById("nombre").value;
+        setCookie("nombre", nombre, 30);
+    }
+
+    return true;
 }

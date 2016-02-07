@@ -141,6 +141,10 @@ div.linksfooter4 ul li {
     top: 65%;
 }
 
+.no-margin-right {
+    margin-right: 0px;
+}
+
 footer div.row {
     margin-right: 0px;
     margin-left: 0px;
@@ -266,8 +270,13 @@ ol.breadcrumb a {
     color: white;
 }
 
-.no-padding-left{
-    padding-left:0px;
+.no-padding-left {
+    padding-left: 0px;
+}
+
+.breadcrumb {
+    background: none;
+    padding-left: 0px;
 }
 
 /*fondo  del link goolge*/
@@ -356,16 +365,17 @@ ol.breadcrumb a {
     }
 }
 
-#encabezado{
+#encabezado {
     text-align: center;
     background-image: url("../img/animacion/tabla_grande.png");
     background-size: 100% 100%;
     margin-left: 3%;
-    margin-bottom:2%;
-    margin-top:5%;
-    height:70px;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    height: 70px;
 }
-#encabezado h1{
+
+#encabezado h1 {
     font-size: 3rem;
     font-family: PaintTheCity;
     color: white;
@@ -374,12 +384,13 @@ ol.breadcrumb a {
     margin-top: 8%;
 }
 
-@media only screen and (max-width:767px) {
-    #encabezado h1{
+@media only screen and (max-width: 767px) {
+    #encabezado h1 {
         margin-top: 12%;
         font-size: 2rem;
     }
-    #encabezado,#encabezado h1{
+
+    #encabezado, #encabezado h1 {
         height: 50px;
     }
 }

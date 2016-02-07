@@ -24,10 +24,11 @@ Descripcion= Estilos para la página de contacto
 
 
 /*color y ancho de la fuente de los label*/
+
 label {
     color: #000;
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #envio{
@@ -277,4 +278,8 @@ button.btn:active:focus, button.btn.active:focus {
 }
 .form-control {    border: 3px solid rgba(42, 27, 27, 0.38);
 
+}
+
+.row{
+    margin-right: 0px;
 }

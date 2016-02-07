@@ -45,13 +45,6 @@ Descripcion= Página web que contiene una galería con fotos de rutas de NatureP
     <!-- Hoja de estilos para la galeria -->
     <link href="css/galeria.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <style>
-        h2{
-            margin-top: 0px;
-            text-align: center;
-            margin-bottom: 3.5%;
-        }
-    </style>
 </head>
 <body>
 <!-- cabecera  -->
@@ -109,10 +102,10 @@ Descripcion= Página web que contiene una galería con fotos de rutas de NatureP
 <!-- fin menu navegacion  -->
 
 <!--Contenedor para las migas de pan -->
-<div class="container">
-    <div class="col-md-4 col-xs-4">
-        <div style="margin-top:10px" class="container">
-            <ol class="breadcrumb">
+<div class="container no-padding-left">
+    <div class="col-md-4 col-xs-4 no-padding-left">
+        <div style="margin-top:10px" class="container no-padding-left">
+            <ol class="breadcrumb no-padding-left">
                 <li><a href="index.html">Home</a></li>
                 <li class="active">Galería</li>
             </ol>
@@ -126,7 +119,7 @@ Descripcion= Página web que contiene una galería con fotos de rutas de NatureP
 
 <div class="container">
     <div class="row">
-        <h2 class="col-xs-12">Fotos de algunas de las excursiones realizadas por NaturePath</h2>
+        <h2 id="tit-galeria" class="col-xs-12">Galería de fotos de las excursiones realizadas</h2>
     </div>
 
     <!-- contenedor de cada una de las imagenes con su correspondiente miniatura -->
@@ -296,7 +289,6 @@ Descripcion= Página web que contiene una galería con fotos de rutas de NatureP
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="js/sliderGaleria/jquery-1.9.1.min.js"></script>
-<script src="js/slider/docs.min.js"></script>
 <script src="js/sliderGaleria/jssor.slider.mini.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap.min.js"></script>
