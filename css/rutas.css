@@ -34,6 +34,7 @@ form#formulario-filtro input:focus, form#formulario-filtro select:focus {
 #tit-rutas-buscadas {
     margin: 0px;
     margin-top: 2%;
+    text-align: center;
 }
 
 /* El texto del formulario aparecerá centrado*/

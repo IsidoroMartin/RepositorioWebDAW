@@ -266,6 +266,10 @@ ol.breadcrumb a {
     color: white;
 }
 
+.no-padding-left{
+    padding-left:0px;
+}
+
 /*fondo  del link goolge*/
 .social .link.google-plus {
     background-color: #ff0000;
