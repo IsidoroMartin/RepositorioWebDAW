@@ -22,9 +22,18 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+form#formulario-filtro input, form#formulario-filtro select {
+    border: 1px solid #024423;
+}
+
+form#formulario-filtro input:focus, form#formulario-filtro select:focus {
+    border: 2px solid #024423;
+}
+
 /* Titulo rutas buscadas*/
 #tit-rutas-buscadas {
     margin: 0px;
+    margin-top: 2%;
 }
 
 /* El texto del formulario aparecerá centrado*/
@@ -52,6 +61,8 @@
 /*El fondo de los filtros*/
 #fondo-filtro {
     height: 100px;
+    background-color: #E5E5E5;
+    border: 1px solid #d9d9d9;
 }
 
 /*Botones siguiente y anterior paginación rutas*/
@@ -68,8 +79,8 @@
     font-size: 1.6rem;
 }
 
-div#fondo-filtro div{
-    margin:20px;
+div#fondo-filtro div {
+    margin: 20px;
 }
 
 /*Botones de contratar y más imagenes de cada ruta*/
@@ -111,7 +122,6 @@ div.btn-rutas button:hover {
     margin-top: 2%;
 }
 
-
 @media only screen and (max-width: 1000px) and (min-width: 769px) {
     #formulario-filtro input, #formulario-filtro select {
         width: 103px;
@@ -119,6 +129,7 @@ div.btn-rutas button:hover {
     }
 
 }
+
 /*Tamaño imagen de fondo para el filtro en moviles*/
 @media only screen and (max-width: 767px) {
     #fondo-filtro {

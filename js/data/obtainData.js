@@ -301,15 +301,15 @@ function determinarColorLetra(tipoValor, valor) {
             else  color = "red"; // Si es díficil mostrará rojo
             break;
         //En este caso es igual que el anterior a excepción que el color amarillo solo se muestra si la ruta esta entre 5 y 20 (km)
-        case "distancia":
+        /*case "distancia":
             if (valor < 5) color = "green";
             else if (valor >= 5 && valor <= 20);
             else color = "red";
-            break;
+            break
         case "terreno":
             if (valor == "Sendero") color = "green";
             else if (valor == "Montaña") color = "brown";
-            break;
+            break;*/
     }
     return color;
 }
