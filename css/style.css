@@ -393,4 +393,8 @@ ol.breadcrumb a {
     #encabezado, #encabezado h1 {
         height: 50px;
     }
+
+    .breadcrumb{
+
+    }
 }
