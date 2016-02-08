@@ -299,6 +299,12 @@ ol.breadcrumb a {
     background-color: #a05f32;
 }
 
+/*Botón cookies*/
+#politica-cookies{
+    background-color: #024423;
+    color: white;
+}
+
 /*tamaño para  pantallas con un maximo de 786px*/
 @media (max-width: 768px) {
     .social .link {
@@ -394,7 +400,7 @@ ol.breadcrumb a {
         height: 50px;
     }
 
-    .breadcrumb{
+    .breadcrumb {
 
     }
 }
