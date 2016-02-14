@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Autor= Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
 Fecha= 18 de noviembre. de 2015
@@ -22,21 +23,20 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
-<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon.png">
     <title>NaturePath</title>
-
     <!-- Librería de bootstrap minimizada -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Hoja de estilos para el menu de navegacion -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/rutas.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {
@@ -57,7 +57,7 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
         <header>
             <a href="index.html">
                 <div id="logo" class="col-xs-4 col-md-4">
-                    <img src="img/logo.png" class="img-responsive">
+                    <img src="img/logo.png" alt="Logo de NaturePath" title="Logo de NaturePath" class="img-responsive">
                 </div>
             </a>
             <!-- Nombre de la empresa -->
@@ -107,7 +107,7 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
         <div style="margin-top:10px" class="container no-padding-left">
             <ol class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li class="active">Contacto</li>
+                <li class="active">Rutas</li>
             </ol>
         </div>
     </div>
@@ -118,7 +118,7 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
 <div class="container">
     <div class="row">
         <div id="fondo-filtro">
-            <form class="form-inline" role="form" id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
+            <form class="form-inline" method="get"  id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
                 <!-- Formulario de filtros | La clase sr-only es para hacer el display del nombre de la ruta en pantallas que no puedan ver el placeholder-->
                 <div class="form-group" style="margin-left:0px">
                     <label for="buscador" class="">Nombre Ruta</label> <br>
@@ -185,29 +185,22 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
         <div class="container no-padding-left">
             <h2 id="tit-rutas-buscadas" class="col-xs-12 no-padding-left">Estas son las rutas más populares</h2>
             <!-- Titulo de filtros -->
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">El Yelmo</h4><img class="img-responsive col-xs-8" alt="Imagen ruta al Yelmo" src="img/rutas/yelmo/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>303km</span><br><span>Dificultad:</span><span style="color:#00004c"> Normal</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">La Camorza</h4><img class="img-responsive col-xs-8" alt="Imagen ruta a la Camorza" src="img/rutas/camorza/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>6km</span><br><span>Dificultad:</span><span style="color:green"> Fácil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Cuerda Larga</h4><img class="img-responsive col-xs-8" alt="Imagen cuerda larga" src="img/rutas/cuerdalarga/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>2km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
         </div>
     </div>
     <div class="row">
         <div class="container no-padding-left">
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles">
-            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Pico de Abantos</h4><img class="img-responsive col-xs-8" alt="Imagene abantos" src="img/rutas/abantos/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">28.93km</span><br><span>Dificultad:</span><span style="color:green"> Fácil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Laguna Larga</h4><img class="img-responsive col-xs-8" alt="Imagen ruta a la laguna" src="img/rutas/laguna/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">25km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Andalucía<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Guejar de la Sierra</h4><img class="img-responsive col-xs-8" alt="Imagen ruta Guejar" src="img/rutas/guejar/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">34km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Andalucía<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
         </div>
     </div>
     <!-- En este div saldrá el botón de siguiente y de anterior si procede en la paginación de rutas -->
     <div id="paginacion">
 
     </div>
-</div>
 </div>
 
 <!-- /container -->
@@ -293,6 +286,10 @@ Descripcion= Página que contiene las rutas posibles que puedes realizar con Nat
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/data/obtainData.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script>
+mensajeBienvenidaSiNecesario();
+</script>
 </body>
 </html>

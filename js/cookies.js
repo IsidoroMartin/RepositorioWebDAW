@@ -21,11 +21,16 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-function setCookie(cname, cvalue, exdays) {
+
+function setCookieDays(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue;
 }
 
 function getCookie(cname) {
@@ -39,14 +44,33 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
-    var username = getCookie("username");
-    if (username != "") {
-        alert("Welcome again " + username);
-    } else {
-        username = prompt("Please enter your name:", "");
-        if (username != "" && username != null) {
-            setCookie("username", username, 365);
-        }
+function checkCookie(name) {
+    var cookie = getCookie(name);
+    if (cookie != "") {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Muestra el mensaje de bienvenida si es necesario, (Dependiendo de si el mensaje ya ha salido y además
+ * Si existe la cookie del nombre)
+ */
+function mensajeBienvenidaSiNecesario() {
+    var nombreCookie = "nombre";
+    if (checkCookie(nombreCookie) && !checkCookie("name-accepted")) {
+        setCookie("name-accepted", "true");
+        var nombre = capitalizeFirstLetter(decodeURIComponent(getCookie(nombreCookie)));
+        swal({
+            title: "<img id='img-bienvenida' src='./img/logo.png'><h3>Bienvenido de nuevo</h3>",
+            text: "<strong id='nombre-cookie'>" + nombre + "</strong>",
+            html: true
+        });
     }
 }
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+

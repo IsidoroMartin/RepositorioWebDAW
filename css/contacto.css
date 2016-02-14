@@ -36,6 +36,11 @@ label {
     margin-bottom:30px;
 }
 
+#envio:active:focus:hover{
+    background-color:#024423;
+    opacity: 0.8;
+}
+
 /*margen bottom de los input telefonomovil y asunto*/
 #telefonoMovil, #asunto {
     margin-bottom: 15px;
@@ -266,14 +271,12 @@ button.btn:active {
 button.btn:focus {
     outline: 0;
     opacity: 0.6;
-    background: #19b9e7;
     color: #fff;
 }
 
 button.btn:active:focus, button.btn.active:focus {
     outline: 0;
     opacity: 0.6;
-    background: #19b9e7;
     color: #fff;
 }
 .form-control {    border: 3px solid rgba(42, 27, 27, 0.38);

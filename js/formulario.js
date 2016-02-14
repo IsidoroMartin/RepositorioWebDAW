@@ -81,8 +81,12 @@ function habilitarTerminosYCondiciones(frm) {
 // funcion que habilita el boton si estan todos los campos rellenos y la
 // casillla de verificacion esta chekeada
 function activarBoton(frm) {
-    var terminos = document.getElementById("terminos");
-    frm.envio.disabled = !habilitarTerminosYCondiciones(frm) && terminos.checked;
+    var terminos = document.getElementById("terminos")
+    if (habilitarTerminosYCondiciones(frm) && terminos.checked) {
+        frm.envio.disabled = false
+    } else {
+        frm.envio.disabled = true
+    }
 
 }
 
@@ -105,9 +109,12 @@ function mostrarErrors(nombreCampo, sintaxis) {
 function validar() {
     var errores = document.getElementById("errores");
     if (errores.innerHTML == "") { //No hay errores
-        var nombre = document.getElementById("nombre").value;
-        setCookie("nombre", nombre, 30);
+        var nombre = encodeURIComponent(document.getElementById("nombre").value);
+        var apellidos = encodeURIComponent(document.getElementById("primerApellido").value + " " + document.getElementById("segundoApellido").value);
+        var email = encodeURIComponent(document.getElementById("email").value);
+        setCookieDays("nombre", nombre, 30);
+        setCookieDays("apellidos", apellidos, 30);
+        setCookieDays("email", email, 30);
     }
-
     return true;
 }

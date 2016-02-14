@@ -106,6 +106,22 @@ footer a {
     padding-bottom: 10%;
 }
 
+/*Estilos mensaje bienvenida cookie*/
+#img-bienvenida {
+    font-family: fuenteHeader;
+    width: 120px;
+}
+
+#nombre-cookie {
+    font-family: fuenteHeader;
+    color: black;
+    font-size: 25px;
+}
+
+#boton-cookie:hover {
+    opacity: 0.8;
+}
+
 /*margen arriba del parrafo */
 div.copyright p {
     margin-bottom: 0.5%;
@@ -300,7 +316,7 @@ ol.breadcrumb a {
 }
 
 /*Botón cookies*/
-#politica-cookies{
+#politica-cookies {
     background-color: #024423;
     color: white;
 }
@@ -403,4 +419,52 @@ ol.breadcrumb a {
     .breadcrumb {
 
     }
+}
+
+/*boton*/
+/*alto,ancho,pading,fuente,color,fondo,bordes,sombra del boton*/
+.btn1 {
+    height: 50px;
+    margin-left: -4%;
+    padding: 0 20px;
+    vertical-align: middle;
+    background-color: #024423;
+    border-color: #E7E7E7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.btnLicencia {
+    margin-left: 40%;
+}
+
+.btn1:hover {
+    opacity: 0.6;
+    color: #FFF;
+}
+
+.btn:active{
+    opacity:0.8;
+}
+
+/*fondo gris */
+.fondoGris{
+    background-color: #E5E5E5;
+    padding:80px;
+    text-align:center;
 }

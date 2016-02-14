@@ -39,7 +39,6 @@ var indicePosMostrar = 0;
 window.onload = function init() {
     divsDeRutas = document.getElementsByClassName("rutas-posibles"); //obtengo los div de rutas (Donde las rutas se irán mostrando)
     obtenerRutas(); //obtengo las rutas y van a la variable lista rutas
-    pintarRutas(obtenerRutasPopulares()); //Pinto las rutas más populares
 };
 
 /*
@@ -55,7 +54,7 @@ function obtenerRutas() {
                 listaRutas = JSON.parse(xhttp.responseText);
             }
         };
-        xhttp.open("GET", "./js/data/rutas.json", false);
+        xhttp.open("GET", "./js/data/rutas.json", true);
         xhttp.send(null);
     } catch (err) {
         for (var i = 0; i < divsDeRutas.length; i++) {
@@ -238,7 +237,7 @@ function pintarRutas(listaRutas) {
         if (listaRutas[i] != undefined) {
             divsDeRutas[i].innerHTML = '<div class="row">' +
                 '<h4 class="col-xs-12">' + listaRutas[i].nombre + '</h4>' +
-                '<img class="img-responsive col-xs-8" src="' + listaRutas[i].images[0] + '">' +
+                '<img class="img-responsive col-xs-8" title="Imagen de muestra de la ruta: '+listaRutas[i].nombre+'" alt="Imagen de muestra de la ruta: '+listaRutas[i].nombre+'" src="' + listaRutas[i].images[0] + '">' +
                 '<div class="informacion-rutas" class="col-xs-4">' +
                 '<span>Distancia:</span> ' + '<span style="color:' + determinarColorLetra("distancia", listaRutas[i].kilometros) + '">' + listaRutas[i].kilometros + 'km</span><br>' +
                 '<span>Dificultad:</span><span style="color:' + determinarColorLetra("dificultad", listaRutas[i].dificultad) + '"> ' + listaRutas[i].dificultad + '</span><br>' +
@@ -250,7 +249,6 @@ function pintarRutas(listaRutas) {
         } else break;
     }
 }
-
 /*Este método es llamado cuando hay más de 6 reutas y por lo tanto los botones de siguiente y anterior tienen que apaecer*/
 function mostrarRutasSiguientes() {
     indicePosMostrar += 6;
@@ -300,16 +298,6 @@ function determinarColorLetra(tipoValor, valor) {
             else if (valor == "Normal") color = "#00004c"; // si es normal mostrará amarillo
             else  color = "red"; // Si es díficil mostrará rojo
             break;
-        //En este caso es igual que el anterior a excepción que el color amarillo solo se muestra si la ruta esta entre 5 y 20 (km)
-        /*case "distancia":
-            if (valor < 5) color = "green";
-            else if (valor >= 5 && valor <= 20);
-            else color = "red";
-            break
-        case "terreno":
-            if (valor == "Sendero") color = "green";
-            else if (valor == "Montaña") color = "brown";
-            break;*/
     }
     return color;
 }

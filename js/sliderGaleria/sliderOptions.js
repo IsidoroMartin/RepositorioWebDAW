@@ -2,7 +2,7 @@
 jQuery(document).ready(function ($) {
 
     var jssor_1_options = {
-        $AutoPlay: true,
+        $AutoPlay: false,
         $ArrowNavigatorOptions: {
             $Class: $JssorArrowNavigator$
         },
