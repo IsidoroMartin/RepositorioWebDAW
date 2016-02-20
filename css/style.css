@@ -280,6 +280,10 @@ ol.breadcrumb a {
     transform: translateX(10px) rotate(360deg);
 }
 
+.cookies{
+    font-size: 1.6rem;
+}
+
 /*color de letra de los links de redes sociales*/
 .social .link.google-plus, .social .link.twitter, .social .link.facebook,
 .social .link.instagram {

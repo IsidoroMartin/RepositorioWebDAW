@@ -14,18 +14,8 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--formulario -->
     <link rel="stylesheet" href="css/contacto.css">
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript">
-        window.cookieconsent_options = {
-            "message": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios mediante el análisis de sus hábitos de navegación. Al continuar con la navegación, entendemos que se acepta nuestra política de cookies. ",
-            "dismiss": "Entendido",
-            "learnMore": "Saber más",
-            "link": "politicacookies.html",
-            "theme": "light-bottom"
-        };
-    </script>
-
-    <script type="text/javascript"  src="js/politicaCookiesJs.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
     <!-- End Cookie Consent plugin -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -76,7 +66,7 @@
                         <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
                         <li><a href="rutas.html">Rutas</a></li>
                         <li><a href="galeria.html">Galería</a></li>
-                        <li class="active"><a href="contacto.html">Contacto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -89,139 +79,101 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-xs-4 no-padding-left">
-            <div style="margin-top:2%;" class="container">
-                <ol class="breadcrumb no-padding-left">
+            <div style="margin-top:10px" class="container no-padding-left">
+                <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Contacto</li>
+                    <li class="active">Política de cookies</li>
                 </ol>
             </div>
         </div>
         <div class="col-md-3 col-xs-4 " id="encabezado">
-            <h1>CONTACTO</h1>
+            <h1>COOKIES</h1>
         </div>
     </div>
-    <div class="row fondoForm col-xs-12">
-        <div id="titContacto" class="col-sm-8 col-sm-offset-2">
-            <h2>Por favor, rellene sus datos para enviar el mensaje</h2>
-        </div>
-        <div id="errores" class="col-sm-8 col-sm-offset-2">
-            <!-- En este DIV se mostrarán los errores -->
-        </div>
-        <div class="col-sm-8 col-sm-offset-2">
-            <form class="form-horizontal" role="form" id="frm" method="post" onsubmit="return validar()"
-                  data-toggle="validator"
-                  action="datosEnviadosCorrectamente.html"
-                  enctype="application/form-data">
+    <div class="container row">
+        <div class="container col-md-12 cookies">
+            <h4>POLITICA DE COOKIES</h4>
 
-                <div class="form-group">
-                    <label class="" for="nombre">Nombre*</label> <input type="text" id="nombre"
-                                                                        class="form-control"
-                                                                        placeholder="Nombre"
-                                                                        title="Introduce un Nombre"
-                                                                        pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                                        data-sintax="Recuerda que sólo puedes introducir letras."
-                                                                        oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                                                                        oninput="activarBoton(frm)"
-                                                                        required>
-                </div>
-                <div class="form-group">
-                    <label class="" for="primerApellido">Primer
-                        Apellido*</label> <input type="text" id="primerApellido"
-                                                 class="form-control" placeholder="Primer Apellido"
-                                                 title="Introduce el primer Apellido(solo letras)"
-                                                 pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                 data-sintax="Recuerda que sólo puedes introducir letras."
-                                                 oninvalid="this.value='';mostrarErrors('primer apellido',this.getAttribute('data-sintax'))"
-                                                 oninput="activarBoton(frm)" required>
-                </div>
-                <div class="form-group">
-                    <label class="" for="segundoApellido">Segundo
-                        Apellido*</label> <input type="text" id="segundoApellido"
-                                                 class="form-control" placeholder="Segundo Apellido"
-                                                 title="Introduce el segundo Apellido(solo letras)"
-                                                 pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                 data-sintax="Recuerda que sólo puedes introducir letras."
-                                                 oninvalid="this.value='';mostrarErrors('segundo apellido',this.getAttribute('data-sintax'))"
-                                                 oninput="activarBoton(frm)" required>
-                </div>
+            <p>Cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies
+                permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de
+                navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en
+                que
+                utilice su equipo, pueden utilizarse para reconocer al usuario.. El navegador del usuario memoriza
+                cookies
+                en el disco duro solamente durante la sesión actual ocupando un espacio de memoria mínimo y no
+                perjudicando
+                al ordenador. Las cookies no contienen ninguna clase de información personal específica, y la mayoría de
+                las
+                mismas se borran del disco duro al finalizar la sesión de navegador (las denominadas cookies de
+                sesión).</p>
+            <p>
+                La mayoría de los navegadores aceptan como estándar a las cookies y, con independencia de las mismas,
+                permiten o impiden en los ajustes de seguridad las cookies temporales o memorizadas.
+            </p><br>
 
-                <div class="form-group">
-                    <label class="" for="email">Email*</label> <input
-                        type="email" id="email" class="form-control"
-                        placeholder="correo@ejemplo.com" title="Introduce un email"
-                        data-sintax="Recuerda que su email tiene que ser válido (nombre@dominio)"
-                        oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                        oninput="activarBoton(frm)" required>
-                </div>
+            <h4>¿Qué tipos de cookies utiliza esta página web?</h4>
 
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label class="" for="telefonoFijo">Teléfono Fijo</label>
-                        <input type="tel" id="telefonoFijo"
-                               class="form-control" placeholder="Teléfono Fijo"
-                               data-sintax="Recuerda que los teléfonos fijos empiezan por 9 seguidos de 8 digitos."
-                               oninvalid="this.value='';mostrarErrors('teléfono fijo',this.getAttribute('data-sintax'))"
-                               title="Introduce un telefono que empiece por 9 seguido de 7 numeros"
-                               pattern="^[9]\d{8}$"
-                               oninput="activarBoton(frm)">
-                    </div>
-                    <div class="col-xs-6">
-                        <label class="" for="telefonoMovil">Teléfono
-                            Movil*</label> <input type="tel" id="telefonoMovil"
-                                                  class="form-control" placeholder="Teléfono móvil"
-                                                  data-sintax="Recuerda que los teléfonos moviles empiezan por 6 o 7 seguidos de 8 digitos."
-                                                  oninvalid="this.value='';mostrarErrors('teléfono móvil',this.getAttribute('data-sintax'))"
-                                                  pattern="^[67]\d{8}$"
-                                                  oninput="activarBoton(frm)"
-                                                  title="Introduce un telefono que empiece por 6 o 7 seguido de 8 numeros"
-                                                  required/>
-                    </div>
-                </div>
+            <p> Las cookies se pueden clasificar en diferentes categorías dependiendo de la entidad que las gestione, el
+                plazo de tiempo que permanecen activas o según su finalidad. No obstante lo anterior, en ocasiones es
+                posible que una misma cookie pueda estar incluida en más de una categoría.
+                En la actualidad podemos distinguir los siguientes tipos de cookies:</p>
 
-                <div class="form-group">
-                    <label class="" for="descripcion">Descripcion*</label>
-                            <textarea id="descripcion" class="form-control"
-                                      placeholder="Escribe aqui tus comentarios"
-                                      title="Introduce un comentario"
-                                      data-sintax="El campo descripción es obligatorio."
-                                      oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                                      oninput="activarBoton(frm)" required></textarea>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label class="" for="tipoConsulta">Tipo de consulta*</label> <select
-                            id="tipoConsulta"
-                            class="form-control"
-                            oninvalid="this.value=''"
-                            onchange="rellenarLista(frm)">
-                        <option value="consulta">Tipo de consulta</option>
-                        <option value="sugerencia">Sugerencia</option>
-                        <option value="queja">Queja</option>
-                        <option value="informacion">Información</option>
-                    </select>
-                    </div>
-                    <div class="col-xs-6">
-                        <label class="" for="asunto">Asunto*</label> <select
-                            id="asunto" class="form-control" onchange="activarBoton(frm)"
-                            oninvalid="this.value=''"
-                            disabled>
-                    </select>
+            <ul>
+                <li><strong>Cookies técnicas:</strong> Son aquéllas que permiten al usuario la navegación a través de
+                    una
+                    página web,
+                    plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan
+                    como,
+                    por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a
+                    partes de
+                    acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de
+                    un
+                    pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de
+                    seguridad
+                    durante la navegación, almacenar contenidos para la difusión de videos o sonido o compartir
+                    contenidos a
+                    través de redes sociales.
+                </li>
+                <li>
+                    <strong>Cookies de análisis:</strong> Son aquéllas que bien tratadas por nosotros o por terceros,
+                    nos
+                    permiten
+                    cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la
+                    utilización
+                    que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página
+                    web
+                    con el fin de mejorar la oferta de productos o servicios que le ofrecemos.
+                </li>
+            </ul>
+            <br>
+            <p><strong>El usuario acepta expresamente, por la utilización de este sitio, el tratamiento de la
+                información
+                recabada en la forma y con los fines anteriormente mencionados.</strong> Y asimismo reconoce conocer la
+                posibilidad de rechazar el tratamiento de tales datos o información rechazando el uso de Cookies
+                mediante la selección de la configuración apropiada a tal fin en su navegador. Si bien esta opción de
+                bloqueo de Cookies en su navegador puede no permitirle el uso pleno de todas las funcionalidades del
+                Website.</p>
 
-                    </div>
-                </div>
+            <p>Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo
+                mediante la configuración de las opciones del navegador instalado en su
+                ordenador
+            </p>
 
-                <div>
-                    <label> <input type="checkbox" id="terminos" disabled onclick="activarBoton(frm)">
-                        Acepto Términos y
-                        Condiciones de uso
-                    </label>
-                </div>
-                <button type="submit" id="envio" class="btn1 btn" onclick="errores.innerHTML = ''" disabled>Enviar
-                </button>
-            </form>
+
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647?hl=es">Chrome</a></li>
+                <li><a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9">Explorer</a>
+                </li>
+                <li>
+                    <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias?redirectlocale=es&redirectslug=habilitar-y-deshabilitar-cookies-que-los-sitios-we">Firefox</a>
+                </li>
+                <li><a href="https://support.apple.com/kb/ph5042?locale=es_ES">Safari</a></li>
+            </ul>
+            <p>Si tiene dudas sobre esta política de cookies, puede contactar con cookies@naturepath.com</p>
         </div>
     </div>
 </div>
+</form>
 
 
 <!-- /container -->

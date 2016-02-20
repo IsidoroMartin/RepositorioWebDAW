@@ -108,7 +108,7 @@ function mostrarErrors(nombreCampo, sintaxis) {
 
 function validar() {
     var errores = document.getElementById("errores");
-    if (errores.innerHTML == "") { //No hay errores
+    if (errores.innerHTML == "") {
         var nombre = encodeURIComponent(document.getElementById("nombre").value);
         var apellidos = encodeURIComponent(document.getElementById("primerApellido").value + " " + document.getElementById("segundoApellido").value);
         var email = encodeURIComponent(document.getElementById("email").value);

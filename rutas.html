@@ -13,16 +13,7 @@
     <link href="css/rutas.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/sweetalert.css">
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript">
-        window.cookieconsent_options = {
-            "message": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios mediante el análisis de sus hábitos de navegación. Al continuar con la navegación, entendemos que se acepta nuestra política de cookies. ",
-            "dismiss": "Entendido",
-            "learnMore": "Saber más",
-            "link": "politicacookies.html",
-            "theme": "light-bottom"
-        };
-    </script>
+    <script src="./js/cookies.js"></script>
 
     <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
 </head>
@@ -94,7 +85,7 @@
 <div class="container">
     <div class="row">
         <div id="fondo-filtro">
-            <form class="form-inline" method="get"  id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
+            <form class="form-inline" method="get" id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
                 <!-- Formulario de filtros | La clase sr-only es para hacer el display del nombre de la ruta en pantallas que no puedan ver el placeholder-->
                 <div class="form-group" style="margin-left:0px">
                     <label for="buscador" class="">Nombre Ruta</label> <br>
@@ -126,12 +117,12 @@
                     <label for="ubicacion" class="">Ubicacion</label> <br>
                     <select id="ubicacion" class="form-control">
                         <option value="undefined">Ubicación</option>
-                        <option value="Madrid">Madrid</option>
-                        <option value="Cataluña">Cataluña</option>
-                        <option value="Galicia">Galicia</option>
                         <option value="Andalucía">Andalucía</option>
                         <option value="Asturias">Asturias</option>
                         <option value="Cantabria">Cantabria</option>
+                        <option value="Cataluña">Cataluña</option>
+                        <option value="Galicia">Galicia</option>
+                        <option value="Madrid">Madrid</option>
                     </select>
                 </div>
                 <!-- Filtro terreno -->
@@ -161,16 +152,95 @@
         <div class="container no-padding-left">
             <h2 id="tit-rutas-buscadas" class="col-xs-12 no-padding-left">Estas son las rutas más populares</h2>
             <!-- Titulo de filtros -->
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">El Yelmo</h4><img class="img-responsive col-xs-8" alt="Imagen ruta al Yelmo" src="img/rutas/yelmo/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>303km</span><br><span>Dificultad:</span><span style="color:#00004c"> Normal</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">La Camorza</h4><img class="img-responsive col-xs-8" alt="Imagen ruta a la Camorza" src="img/rutas/camorza/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>6km</span><br><span>Dificultad:</span><span style="color:green"> Fácil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Cuerda Larga</h4><img class="img-responsive col-xs-8" alt="Imagen cuerda larga" src="img/rutas/cuerdalarga/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span>2km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">El Yelmo</h4><img class="img-responsive col-xs-8"
+                                                                         alt="Imagen ruta al Yelmo"
+                                                                         src="img/rutas/yelmo/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span>
+                        <span>303km</span><br><span>Dificultad:</span><span
+                                style="color:#00004c"> Normal</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span
+                                style=""> Montaña</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">La Camorza</h4><img class="img-responsive col-xs-8"
+                                                                           alt="Imagen ruta a la Camorza"
+                                                                           src="img/rutas/camorza/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span>
+                        <span>6km</span><br><span>Dificultad:</span><span style="color:green"> Fácil</span><br><span>Localización:</span>
+                        Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">Cuerda Larga</h4><img class="img-responsive col-xs-8"
+                                                                             alt="Imagen cuerda larga"
+                                                                             src="img/rutas/cuerdalarga/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span>
+                        <span>2km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span>
+                        Madrid<br><span>Terreno:</span><span style=""> Sendero</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="container no-padding-left">
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Pico de Abantos</h4><img class="img-responsive col-xs-8" alt="Imagene abantos" src="img/rutas/abantos/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">28.93km</span><br><span>Dificultad:</span><span style="color:green"> Fácil</span><br><span>Localización:</span> Madrid<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Laguna Larga</h4><img class="img-responsive col-xs-8" alt="Imagen ruta a la laguna" src="img/rutas/laguna/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">25km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Andalucía<br><span>Terreno:</span><span style=""> Sendero</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
-            <div class="col-xs-12 col-sm-4  rutas-posibles"><div class="row"><h4 class="col-xs-12">Guejar de la Sierra</h4><img class="img-responsive col-xs-8" alt="Imagen ruta Guejar" src="img/rutas/guejar/imagen1.jpg"><div class="informacion-rutas"><span>Distancia:</span> <span style="">34km</span><br><span>Dificultad:</span><span style="color:red"> Difícil</span><br><span>Localización:</span> Andalucía<br><span>Terreno:</span><span style=""> Montaña</span><br><div class="btn-rutas"><button type="button" class="btn btn-success">Más imágenes</button> <button type="button" class="btn btn-success">Contratar</button></div></div></div></div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">Pico de Abantos</h4><img class="img-responsive col-xs-8"
+                                                                                alt="Imagene abantos"
+                                                                                src="img/rutas/abantos/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span> <span style="">28.93km</span><br><span>Dificultad:</span><span
+                            style="color:green"> Fácil</span><br><span>Localización:</span>
+                        Madrid<br><span>Terreno:</span><span style=""> Montaña</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">Laguna Larga</h4><img class="img-responsive col-xs-8"
+                                                                             alt="Imagen ruta a la laguna"
+                                                                             src="img/rutas/laguna/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span> <span style="">25km</span><br><span>Dificultad:</span><span
+                            style="color:red"> Difícil</span><br><span>Localización:</span>
+                        Andalucía<br><span>Terreno:</span><span style=""> Sendero</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4  rutas-posibles">
+                <div class="row"><h4 class="col-xs-12">Guejar de la Sierra</h4><img class="img-responsive col-xs-8"
+                                                                                    alt="Imagen ruta Guejar"
+                                                                                    src="img/rutas/guejar/imagen1.jpg">
+                    <div class="informacion-rutas"><span>Distancia:</span> <span style="">34km</span><br><span>Dificultad:</span><span
+                            style="color:red"> Difícil</span><br><span>Localización:</span>
+                        Andalucía<br><span>Terreno:</span><span style=""> Montaña</span><br>
+                        <div class="btn-rutas">
+                            <button type="button" class="btn btn-success">Más imágenes</button>
+                            <button type="button" class="btn btn-success">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- En este div saldrá el botón de siguiente y de anterior si procede en la paginación de rutas -->
@@ -200,7 +270,7 @@
                 <ul>
                     <li><a class="link" href="#4">Soporte Tecnico</a></li>
                     <li><a class="link" href="#5">Site map </a></li>
-                    <li><a class="link" href="#6">Cookies</a></li>
+                    <li><a class="link" href="politicaCookies.html">Política de Cookies</a></li>
                 </ul>
             </div>
 
@@ -265,7 +335,7 @@
 <script type="text/javascript" src="js/cookies.js"></script>
 <script type="text/javascript" src="js/sweetalert.min.js"></script>
 <script>
-mensajeBienvenidaSiNecesario();
+    mensajeBienvenidaSiNecesario();
 </script>
 </body>
 </html>

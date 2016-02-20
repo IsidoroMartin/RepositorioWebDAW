@@ -159,7 +159,7 @@ function filtrarRutasPorUbicacion(listaRutas, ubicacion) {
 
 /* Esta función aplicara tantos filtros como sean necesarios. */
 function procesarFiltrosPintarFiltrado(nombre, dificultad, tipo, distancia, ubicacion) {
-    var tituloResultados = "Mostrando resultados filtrados por: ";
+    var tituloResultados = "Mostrando ? ruta^ filtrando por: ";
     var listaFiltrada = listaRutas;
     if (dificultad != "undefined") {
         listaFiltrada = filtrarRutasPorDificultad(listaFiltrada, dificultad);
@@ -192,8 +192,12 @@ function procesarFiltrosPintarFiltrado(nombre, dificultad, tipo, distancia, ubic
         tituloResultados = "No hay ninguna ruta que cumpla los criterios establecidos.<br><span style='text-decoration:underline'>Mostrando las rutas más populares</span>";
         listaFiltrada = obtenerRutasPopulares();
     }
-    else
-        tituloResultados = tituloResultados.substring(0, tituloResultados.length - 2)
+    else {
+        var longitud = listaFiltrada.length;
+        tituloResultados = tituloResultados.substring(0, tituloResultados.length - 2);
+        tituloResultados = tituloResultados.replace("?", longitud);
+        tituloResultados = tituloResultados.replace("^", (longitud == 1) ? "" : "s");
+    }
 
     document.getElementById("tit-rutas-buscadas").innerHTML = tituloResultados;
 
@@ -237,7 +241,7 @@ function pintarRutas(listaRutas) {
         if (listaRutas[i] != undefined) {
             divsDeRutas[i].innerHTML = '<div class="row">' +
                 '<h4 class="col-xs-12">' + listaRutas[i].nombre + '</h4>' +
-                '<img class="img-responsive col-xs-8" title="Imagen de muestra de la ruta: '+listaRutas[i].nombre+'" alt="Imagen de muestra de la ruta: '+listaRutas[i].nombre+'" src="' + listaRutas[i].images[0] + '">' +
+                '<img class="img-responsive col-xs-8" title="Imagen de muestra de la ruta: ' + listaRutas[i].nombre + '" alt="Imagen de muestra de la ruta: ' + listaRutas[i].nombre + '" src="' + listaRutas[i].images[0] + '">' +
                 '<div class="informacion-rutas" class="col-xs-4">' +
                 '<span>Distancia:</span> ' + '<span style="color:' + determinarColorLetra("distancia", listaRutas[i].kilometros) + '">' + listaRutas[i].kilometros + 'km</span><br>' +
                 '<span>Dificultad:</span><span style="color:' + determinarColorLetra("dificultad", listaRutas[i].dificultad) + '"> ' + listaRutas[i].dificultad + '</span><br>' +
@@ -281,7 +285,7 @@ function mostrarRutasAnteriores() {
  * Siempre devuelve false, porque no quiero que la página se recargue (Ya que todo se encuentra en local).
  * @returns {boolean}
  */
-function comprobarBuscar(){
+function comprobarBuscar() {
     mostrarResultadosFiltrados();
     //No quiero que nunca se haga el submit (Todo está en local).
     return false;
