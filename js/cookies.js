@@ -77,7 +77,7 @@ window.cookieconsent_options = {
     "message": "Nuestro sitio web utiliza cookies para mejorar su experiencia de navegación. Al continuar con la navegación, entendemos que acepta nuestra política de cookies",
     "dismiss": "Entendido",
     "learnMore": "Saber más",
-    "link": "politicacookies.html",
+    "link": "politicaCookies.html",
     "theme": "light-top"
 };
 
