@@ -19,56 +19,56 @@
 
 </head>
 <body>
-<!-- cabecera  -->
-<div class="container">
     <!-- cabecera  -->
-    <div class="row">
-        <header>
-            <a href="index.html">
-                <div id="logo" class="col-xs-4 col-md-4">
-                    <img src="img/logo.png" alt="Logo de NaturePath" title="Logo de NaturePath" class="img-responsive">
-                </div>
-            </a>
-            <!-- Nombre de la empresa -->
-            <a href="index.html">
-                <div id="nombre-empresa" class="col-xs-4 col-md-4">
-                    <h1><span class="colorGreen">Nature</span><span class="colorBrown">Path</span></h1>
-                </div>
-            </a>
-        </header>
+    <div class="container">
+        <!-- cabecera  -->
+        <div class="row">
+            <header>
+                <a href="index.html">
+                    <div id="logo" class="col-xs-4 col-md-4">
+                        <img src="img/logo.png" alt="Logo de NaturePath" title="Logo de NaturePath" class="img-responsive">
+                    </div>
+                </a>
+                <!-- Nombre de la empresa -->
+                <a href="index.html">
+                    <div id="nombre-empresa" class="col-xs-4 col-md-4">
+                        <h1><span class="colorGreen">Nature</span><span class="colorBrown">Path</span></h1>
+                    </div>
+                </a>
+            </header>
+        </div>
     </div>
-</div>
-<!-- Fin cabecera  -->
-<!-- menu de navegacion  -->
-<div class="row">
-    <div class="col-md-12">
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed"
-                            data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1"
-                            aria-expanded="false">
+    <!-- Fin cabecera  -->
+    <!-- menu de navegacion  -->
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span> <span
-                            class="icon-bar"></span> <span class="icon-bar"></span> <span
-                            class="icon-bar"></span>
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span>
                     </button>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse"
-                     id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="rutas.html">Rutas</a></li>
-                        <li><a href="galeria.html">Galería</a></li>
-                        <li class="active"><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
+                id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="rutas.html">Rutas</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li class="active"><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 </div>
 <!-- fin menu navegacion  -->
 
@@ -96,119 +96,126 @@
         </div>
         <div class="col-sm-8 col-sm-offset-2">
             <form class="form-horizontal" id="frm" method="post" onsubmit="return validar()"
-                  data-toggle="validator"
-                  action="datosEnviadosCorrectamente.html">
+            data-toggle="validator"
+            action="datosEnviadosCorrectamente.html">
 
-                <div class="form-group">
-                    <label class="" for="nombre">Nombre*</label> <input type="text" id="nombre"
-                                                                        class="form-control"
-                                                                        placeholder="Nombre"
-                                                                        title="Introduce un Nombre"
-                                                                        pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                                        data-sintax="Recuerda que sólo puedes introducir letras."
-                                                                        oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                                                                        oninput="activarBoton(frm)"
-                                                                        required="required">
-                </div>
-                <div class="form-group">
-                    <label class="" for="primerApellido">Primer
-                        Apellido*</label> <input type="text" id="primerApellido"
-                                                 class="form-control" placeholder="Primer Apellido"
-                                                 title="Introduce el primer Apellido(solo letras)"
-                                                 pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                 data-sintax="Recuerda que sólo puedes introducir letras."
-                                                 oninvalid="this.value='';mostrarErrors('primer apellido',this.getAttribute('data-sintax'))"
-                                                 oninput="activarBoton(frm)" required="required">
+            <div class="form-group">
+                <label class="" for="nombre">Nombre*</label> <input type="text" id="nombre"
+                class="form-control"
+                placeholder="Nombre"
+                title="Introduce un Nombre"
+                pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
+                data-sintax="Recuerda que sólo puedes introducir letras."
+                data-idayuda="formTexto"
+                oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                oninput="activarBoton(frm)"
+                required="required">
+            </div>
+            <div class="form-group">
+                <label class="" for="primerApellido">Primer
+                    Apellido*</label> <input type="text" id="primerApellido"
+                    class="form-control" placeholder="Primer Apellido"
+                    title="Introduce el primer Apellido(solo letras)"
+                    pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
+                    data-sintax="Recuerda que sólo puedes introducir letras."
+                    data-id-ayuda="formTexto"
+                    oninvalid="this.value='';mostrarErrors('primer apellido',this.getAttribute('data-sintax'),this.dataset.id-ayuda)"
+                    oninput="activarBoton(frm)" required="required">
                 </div>
                 <div class="form-group">
                     <label class="" for="segundoApellido">Segundo
                         Apellido*</label> <input type="text" id="segundoApellido"
-                                                 class="form-control" placeholder="Segundo Apellido"
-                                                 title="Introduce el segundo Apellido(solo letras)"
-                                                 pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
-                                                 data-sintax="Recuerda que sólo puedes introducir letras."
-                                                 oninvalid="this.value='';mostrarErrors('segundo apellido',this.getAttribute('data-sintax'))"
-                                                 oninput="activarBoton(frm)" required="required">
-                </div>
+                        class="form-control" placeholder="Segundo Apellido"
+                        title="Introduce el segundo Apellido(solo letras)"
+                        pattern="^([A-Za-z ÁáéÉíÍÓóÚú]{1,30})"
+                        data-sintax="Recuerda que sólo puedes introducir letras."
+                        oninvalid="this.value='';mostrarErrors('segundo apellido',this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                        oninput="activarBoton(frm)" required="required"
+                        data-idayuda="formTexto">
+                    </div>
 
-                <div class="form-group">
-                    <label class="" for="email">Email*</label> <input
+                    <div class="form-group">
+                        <label class="" for="email">Email*</label> <input
                         type="email" id="email" class="form-control"
                         placeholder="correo@ejemplo.com" title="Introduce un email"
                         data-sintax="Recuerda que su email tiene que ser válido (nombre@dominio)"
-                        oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                        oninput="activarBoton(frm)" required="required">
-                </div>
-
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label class="" for="telefonoFijo">Teléfono Fijo</label>
-                        <input type="tel" id="telefonoFijo"
-                               class="form-control" placeholder="Teléfono Fijo"
-                               data-sintax="Recuerda que los teléfonos fijos empiezan por 9 seguidos de 8 digitos."
-                               oninvalid="this.value='';mostrarErrors('teléfono fijo',this.getAttribute('data-sintax'))"
-                               title="Introduce un telefono que empiece por 9 seguido de 7 numeros"
-                               pattern="^[9]\d{8}$"
-                               oninput="activarBoton(frm)">
+                        oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                        oninput="activarBoton(frm)" required="required"
+                        data-idayuda="formEmail">
                     </div>
-                    <div class="col-xs-6">
-                        <label class="" for="telefonoMovil">Teléfono
-                            Movil*</label> <input type="tel" id="telefonoMovil"
-                                                  class="form-control" placeholder="Teléfono móvil"
-                                                  data-sintax="Recuerda que los teléfonos moviles empiezan por 6 o 7 seguidos de 8 digitos."
-                                                  oninvalid="this.value='';mostrarErrors('teléfono móvil',this.getAttribute('data-sintax'))"
-                                                  pattern="^[67]\d{8}$"
-                                                  oninput="activarBoton(frm)"
-                                                  title="Introduce un telefono que empiece por 6 o 7 seguido de 8 numeros"
-                                                  required="required"/>
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="" for="descripcion">Descripcion*</label>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label class="" for="telefonoFijo">Teléfono Fijo</label>
+                            <input type="tel" id="telefonoFijo"
+                            class="form-control" placeholder="Teléfono Fijo"
+                            data-sintax="Recuerda que los teléfonos fijos empiezan por 9 seguidos de 8 digitos."
+                            oninvalid="this.value='';mostrarErrors('teléfono fijo',this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                            title="Introduce un telefono que empiece por 9 seguido de 7 numeros"
+                            pattern="^[9]\d{8}$"
+                            oninput="activarBoton(frm)"
+                            data-idayuda="formTfno">
+                        </div>
+                        <div class="col-xs-6">
+                            <label class="" for="telefonoMovil">Teléfono
+                                Movil*</label> <input type="tel" id="telefonoMovil"
+                                class="form-control" placeholder="Teléfono móvil"
+                                data-sintax="Recuerda que los teléfonos moviles empiezan por 6 o 7 seguidos de 8 digitos."
+                                oninvalid="this.value='';mostrarErrors('teléfono móvil',this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                                pattern="^[67]\d{8}$"
+                                oninput="activarBoton(frm)"
+                                title="Introduce un telefono que empiece por 6 o 7 seguido de 8 numeros"
+                                required="required"
+                                data-idayuda="formTfno"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="" for="descripcion">Descripcion*</label>
                             <textarea id="descripcion" class="form-control"
-                                      placeholder="Escribe aqui tus comentarios"
-                                      title="Introduce un comentario"
-                                      data-sintax="El campo descripción es obligatorio."
-                                      oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'))"
-                                      oninput="activarBoton(frm)" required="required"></textarea>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label class="" for="tipoConsulta">Tipo de consulta*</label> <select
-                            id="tipoConsulta"
-                            class="form-control"
-                            oninvalid="this.value=''"
-                            onchange="rellenarLista(frm)">
-                        <option value="consulta">Tipo de consulta</option>
-                        <option value="sugerencia">Sugerencia</option>
-                        <option value="queja">Queja</option>
-                        <option value="informacion">Información</option>
-                    </select>
-                    </div>
-                    <div class="col-xs-6">
-                        <label class="" for="asunto">Asunto*</label> <select
+                            placeholder="Escribe aqui tus comentarios"
+                            title="Introduce un comentario"
+                            data-sintax="El campo descripción es obligatorio."
+                            oninvalid="this.value='';mostrarErrors(this.id,this.getAttribute('data-sintax'),this.dataset.idayuda)"
+                            oninput="activarBoton(frm)" required="required"
+                            data-idayuda="formDescripcion"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label class="" for="tipoConsulta">Tipo de consulta*</label> <select
+                                id="tipoConsulta"
+                                class="form-control"
+                                oninvalid="this.value=''"
+                                onchange="rellenarLista(frm)">
+                                <option value="consulta">Tipo de consulta</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="queja">Queja</option>
+                                <option value="informacion">Información</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-6">
+                            <label class="" for="asunto">Asunto*</label> <select
                             id="asunto" class="form-control" onchange="activarBoton(frm)"
                             oninvalid="this.value=''"
                             disabled="disabled">
-                    </select>
+                        </select>
 
                     </div>
                 </div>
 
                 <div>
                     <label for="terminos"> <input type="checkbox" id="terminos" disabled="disabled"
-                                                  onclick="activarBoton(frm)">
-                        Acepto Términos y
-                        Condiciones de uso
-                    </label>
-                </div>
-                <button type="submit" id="envio" class="btn1 btn" onclick="errores.innerHTML = ''" disabled="disabled">
-                    Enviar
-                </button>
-            </form>
-        </div>
+                      onclick="activarBoton(frm)">
+                      Acepto Términos y
+                      Condiciones de uso
+                  </label>
+              </div>
+              <button type="submit" id="envio" class="btn1 btn" onclick="errores.innerHTML = ''" disabled="disabled">
+                Enviar
+            </button>
+        </form>
     </div>
+</div>
 </div>
 
 
@@ -224,78 +231,78 @@
             <div class="linksfooter1 col-md-2 col-sm-6">
                 <ul>
                     <li><a class="link" href="licencia.html"
-                           onClick="window.open(this.href, this, 'width=600,height=600');
-                                       return false;">Licencia </a>
-                    </li>
-                    <li><a class="link" href="pagina_ayuda.html">Ayuda</a></li>
-                </ul>
-            </div>
+                       onClick="window.open(this.href, this, 'width=600,height=600');
+                       return false;">Licencia </a>
+                   </li>
+                   <li><a class="link" href="pagina_ayuda.html">Ayuda</a></li>
+               </ul>
+           </div>
 
-            <div class="linksfooter2 col-md-2 col-sm-6">
-                <ul>
-                    <li><a class="link" href="mapa_web.html">Mapa del sitio web</a></li>
-                    <li><a class="link" href="politicaCookies.html">Política de Cookies</a></li>
-                </ul>
-            </div>
-
-            <div class="linksfooter3 col-md-2 col-sm-6">
-                <ul>
-                    <li><a class="link" href="#8">Forma de Pago </a></li>
-                    <li><a class="link" href="#9">Informacion Legal </a></li>
-                </ul>
-            </div>
-
-            <div class="linksfooter4 col-md-2 col-sm-6">
-                <ul>
-                    <li><a class="link" href="#10">Politica De Privacidad </a></li>
-                    <li><a class="link" href="contacto.html">Contactanos</a></li>
-                </ul>
-            </div>
-
-            <div class="social col-md-4 col-sm-12">
-                <a href="http://facebook.com/" class="link facebook" target="_parent">
-                    <span class="fa fa-facebook-square "></span>
-                    <span class="oculto">Facebook</span>
-                </a>
-                <a href="https://twitter.com/" class="link twitter" target="_parent"> <span class="fa fa-twitter">
-
-                        </span>
-                    <span class="oculto">Twitter</span>
-                </a>
-                <a href="https://plus.google.com/" class="link google-plus" target="_parent">
-                    <span class="fa fa-google-plus-square"></span>
-                    <span class="oculto">Google plus</span>
-                </a>
-                <a href="https://instagram.com/" class="link instagram" target="_parent">
-                    <span class="fa fa-instagram"></span>
-                    <span class="oculto">InstaGram</span>
-                </a>
-                <a href="https://youtube.com/" class="link google-plus" target="_parent">
-                    <span class="fa fa-youtube"></span>
-                    <span class="oculto">Youtube</span>
-                </a>
-            </div>
+           <div class="linksfooter2 col-md-2 col-sm-6">
+            <ul>
+                <li><a class="link" href="mapa_web.html">Mapa del sitio web</a></li>
+                <li><a class="link" href="politicaCookies.html">Política de Cookies</a></li>
+            </ul>
         </div>
-        <div class="copyright row">
-            <div class="col-xs-12">
-                NaturePath, S.L. - Dirección Fiscal: Calle Panaderos, 28410 Madrid
-            </div>
-            <div class="col-xs-12">
-                <p>Juan José Ramírez | Isidoro Martín | Miguel Cobertera | Yésica Rojas</p>
-            </div>
+
+        <div class="linksfooter3 col-md-2 col-sm-6">
+            <ul>
+                <li><a class="link" href="#8">Forma de Pago </a></li>
+                <li><a class="link" href="#9">Informacion Legal </a></li>
+            </ul>
         </div>
+
+        <div class="linksfooter4 col-md-2 col-sm-6">
+            <ul>
+                <li><a class="link" href="#10">Politica De Privacidad </a></li>
+                <li><a class="link" href="contacto.html">Contactanos</a></li>
+            </ul>
+        </div>
+
+        <div class="social col-md-4 col-sm-12">
+            <a href="http://facebook.com/" class="link facebook" target="_parent">
+                <span class="fa fa-facebook-square "></span>
+                <span class="oculto">Facebook</span>
+            </a>
+            <a href="https://twitter.com/" class="link twitter" target="_parent"> <span class="fa fa-twitter">
+
+            </span>
+            <span class="oculto">Twitter</span>
+        </a>
+        <a href="https://plus.google.com/" class="link google-plus" target="_parent">
+            <span class="fa fa-google-plus-square"></span>
+            <span class="oculto">Google plus</span>
+        </a>
+        <a href="https://instagram.com/" class="link instagram" target="_parent">
+            <span class="fa fa-instagram"></span>
+            <span class="oculto">InstaGram</span>
+        </a>
+        <a href="https://youtube.com/" class="link google-plus" target="_parent">
+            <span class="fa fa-youtube"></span>
+            <span class="oculto">Youtube</span>
+        </a>
     </div>
+</div>
+<div class="copyright row">
+    <div class="col-xs-12">
+        NaturePath, S.L. - Dirección Fiscal: Calle Panaderos, 28410 Madrid
+    </div>
+    <div class="col-xs-12">
+        <p>Juan José Ramírez | Isidoro Martín | Miguel Cobertera | Yésica Rojas</p>
+    </div>
+</div>
+</div>
 </footer>
 <!--Fin pie de pagina  -->
 
 
 <!--Fin pie de pagina  -->
 <!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/cookies.js"></script>
-<script type="text/javascript" src="js/formulario.js"></script>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/cookies.js"></script>
+    <script type="text/javascript" src="js/formulario.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

@@ -96,12 +96,12 @@ function activarBoton(frm) {
  * @param {type} sintaxis
  * Esta función genera los mensajes de error dinamicamente en el divde errores
  */
-function mostrarErrors(nombreCampo, sintaxis) {
+function mostrarErrors(nombreCampo, sintaxis, idAyuda) {
     var errores = document.getElementById("errores");
     document.getElementById("errores").innerHTML += '<div class="alert alert-danger" role="alert">' +
         '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' +
         '<span class="sr-only">Error:</span>' +
-        '<a href="ayuda"> Introduce un ' + nombreCampo + ' válido' + '. ' +
+        '<a href="pagina_ayuda.html#'+idAyuda+'"> Introduce un ' + nombreCampo + ' válido' + '. ' +
         sintaxis +
         '</a></div>';
 }

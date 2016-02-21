@@ -24,7 +24,53 @@
         #indice li {
             display: block
         }
+
+        #indice a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #indice a :hover {
+            color: white;
+            background-color: #024423;
+        }
+
+        #indice .li-active {
+            color: white;
+            background-color: #024423;
+        }
+
+        #indice {
+            /*position: fixed;*/
+        }
+        #boton-volver{
+            font-size: 3rem;
+            color: #024423;
+            border: 2px solid #024423;
+            border-radius: 3px;
+            padding-right: 2%;
+            padding-top: 0.2%;
+        }
+
     </style>
+    <script type="text/javascript">
+        var oldHash = "";
+        window.onload = function () {
+            seleccionarLiActive(window.location.hash.substring(1));
+        }
+        function seleccionarLiActive(opcion) {
+            if (opcion != oldHash) {
+                var opcionSeleccionada = document.querySelector('li[data-li="' + opcion + '"]');
+                opcionSeleccionada.className += " li-active";
+                if (oldHash != "") {
+                    var oldLi = document.querySelector('li[data-li="' + oldHash + '"]');
+                    oldLi.className = "list-group-item";
+                }
+                oldHash = opcion;
+            }
+        }
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -95,56 +141,117 @@
     <div class="row">
         <div id="indice" class="col-xs-3">
             <ul class="list-group">
-                <li class="list-group-item">Rutas</li>
+                <a href="#rutas">
+                    <li class="list-group-item" data-li="rutas"
+                        onclick="seleccionarLiActive(this.dataset.li)"><strong>Rutas</strong></li>
+                </a>
                 <ul>
                     <ul class="list-group">
-                        <li class="list-group-item">Buscar ruta por nombre</li>
-                        <li class="list-group-item">Buscar ruta por distancia</li>
-                        <li class="list-group-item">Buscar ruta por dificultad</li>
-                        <li class="list-group-item">Buscar ruta por ubicación</li>
-                        <li class="list-group-item">Buscar ruta por tipo de terreno</li>
+                        <a href="#rutasNombre">
+                            <li class="list-group-item" data-li="rutasNombre"
+                                onclick="seleccionarLiActive(this.dataset.li)">Buscar ruta por nombre
+                            </li>
+                        </a>
+                        <a href="#rutasDistancia">
+                            <li class="list-group-item" data-li="rutasDistancia"
+                                onclick="seleccionarLiActive(this.dataset.li)">Buscar ruta por distancia
+                            </li>
+                        </a>
+                        <a href="#rutasDificultad">
+                            <li class="list-group-item" data-li="rutasDificultad"
+                                onclick="seleccionarLiActive(this.dataset.li)">Buscar ruta por dificultad
+                            </li>
+                        </a>
+                        <a href="#rutasUbicacion">
+                            <li class="list-group-item" data-li="rutasUbicacion"
+                                onclick="seleccionarLiActive(this.dataset.li)">Buscar ruta por ubicación
+                            </li>
+                        </a>
+                        <a href="#rutasTipoTerreno">
+                            <li class="list-group-item" data-li="rutasTipoTerreno"
+                                onclick="seleccionarLiActive(this.dataset.li)">Buscar ruta por tipo de terreno
+                            </li>
+                        </a>
                     </ul>
                 </ul>
-                <li class="list-group-item">Contacto</li>
+                <a href="#formContacto">
+                    <li class="list-group-item" data-li="formContacto" onclick="seleccionarLiActive(this.dataset.li)">
+                        <strong>Formulario de contacto</strong></li>
+                </a>
                 <ul>
-                    <li class="list-group-item">Como rellenar los campos del formulario de consulta</li>
                     <ul class="list-group">
-                        <li class="list-group-item">Campos nombre y apellidos</li>
-                        <li class="list-group-item">Campo correo electrónico</li>
-                        <li class="list-group-item">Campos teléfono fijo y móvil</li>
-                        <li class="list-group-item">Campo descripción</li>
-                        <li class="list-group-item">Tipo de consulta y asunto</li>
+                        <a href="#formTexto">
+                            <li class="list-group-item" data-li="formTexto"
+                                onclick="seleccionarLiActive(this.dataset.li)">Campos nombre y apellidos
+                            </li>
+                        </a>
+                        <a href="#formEmail">
+                            <li class="list-group-item" data-li="formEmail"
+                                onclick="seleccionarLiActive(this.dataset.li)">Campo correo electrónico
+                            </li>
+                        </a>
+                        <a href="#formTfno">
+                            <li class="list-group-item" data-li="formTfno"
+                                onclick="seleccionarLiActive(this.dataset.li)">Campos teléfono fijo y móvil
+                            </li>
+                        </a>
+                        <a href="#formDescripcion">
+                            <li class="list-group-item" data-li="formDescripcion"
+                                onclick="seleccionarLiActive(this.dataset.li)">Campo descripción
+                            </li>
+                        </a>
+                        <a href="#formTipoConsulta">
+                            <li class="list-group-item" data-li="formTipoConsulta"
+                                onclick="seleccionarLiActive(this.dataset.li)">Tipo de consulta y asunto
+                            </li>
+                        </a>
                     </ul>
                 </ul>
             </ul>
         </div>
         <div class="col-xs-9">
-            <h1>Rutas</h1>
+            <p>En este apartado explicaremos todos los aspectos del sitio web que pudieran tener alguna dificultad para
+                que cualquier usuario pueda hacer uso de todas las funcionalidades del sitio sin ninguna
+                dificultad</p>
+            <h1 id="rutas">Rutas</h1>
+            <p>A continuación paso a explicar como utilizar la página de rutas:</p>
             <h2 id="rutasNombre">Buscar ruta por nombre</h2>
-            <p>Continuar aqui</p>
+            <p>Para buscar una ruta por nombre se debe introducir parte o el nombre completo de la ruta en cuestión en
+                el campo dedicado a ello del formulario de buscar rutas</p>
             <h2 id="rutasDistancia">Buscar ruta por distancia</h2>
-
+            <p>Para filtrar la búsqueda por distancia se debe seleccionar un rango en el desplegable de distancia del
+                formulario</p>
             <h2 id="rutasDificultad">Buscar ruta por dificultad</h2>
-
+            <p>Para filtrar la búsqueda por dificultad se debe seleccionar un valor en el desplegable de dificultad del
+                formulario</p>
             <h2 id="rutasUbicacion">Buscar ruta por ubicación</h2>
-
+            <p>Para filtrar la búsqueda por ubicación se debe seleccionar un valor en el desplegable de ubicación del
+                formulario</p>
             <h2 id="rutasTipoTerreno">Buscar ruta por tipo de terreno</h2>
-
-            <h1>Formulario de contacto</h1>
-
+            <p>Para filtrar la búsqueda por tipo de terreno se debe seleccionar un valor en el desplegable de tipo de
+                terreno del formulario</p>
+            <hr>
+            <h1 id="formContacto">Formulario de contacto</h1>
+            <p>A continuación paso a explicar como se deben rellenar los campos en el formulario de contacto:</p>
             <h2 id="formTexto">Campos nombre y apellidos</h2>
-
+            <p>Los campos nombre, primer apellido y segundo apellido deben de 1 a 30 letras y no pueden contener ningún
+                otro tipo de carácter y es obligatorio rellenarlo</p>
             <h2 id="formEmail">Campo correo electrónico</h2>
-
+            <p>El campo del correo electrónico debe contener el siguiente formato: micorreo@midominio.es y es obligatorio rellenarlo</p>
             <h2 id="formTfno">Campos teléfono fijo y móvil</h2>
-
+            <p>Los campos teléfono fijo y teléfono movil deben contener un total de 9 dígitos que empiecen en 9 o en 6
+                respectivamente y es obligatorio rellenar el teléfono móvil</p>
+            <p>Ej: Teléfono fijo 918556475 / Teléfono Móvil 622496587</p>
             <h2 id="formDescripcion">Campo descripción</h2>
-
-            <h2 id="formTipoConsulta">Tipo de consulta y asunto</h2>
-
+            <p>El campo descripción es obligatorio rellenarlo</p>
+            <input type="button"  style="margin-left:0px;margin-top:30px;" class="btn1 pull-right" value="Subir"
+                   onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');">
+            <input type="button" style="margin-left:0px;margin-top:30px;" class="btn1 pull-left" value="Volver"
+                   onclick="window.history.back();">
         </div>
     </div>
 </div>
+
 
 <!-- /container -->
 <div class="row ">
@@ -157,23 +264,23 @@
         <div class="linksfooter row">
             <div class="linksfooter1 col-md-2 col-sm-6">
                 <ul>
-                    <li><a class="link" href="licencia.html"
-                           onClick="window.open(this.href, this, 'width=600,height=600');
-                                       return false;">Licencia </a>
-                    </li>
-                    <li><a class="link" href="pagina_ayuda.html">Ayuda</a></li>
+                    <li><a class="link" href="#1">Empresa </a></li>
+                    <li><a class="link" href="#2">Trabaja con Nosotros</a></li>
+                    <li><a class="link" href="#3">Fundacion </a></li>
                 </ul>
             </div>
 
             <div class="linksfooter2 col-md-2 col-sm-6">
                 <ul>
-                    <li><a class="link" href="mapa_web.html">Mapa del sitio web</a></li>
+                    <li><a class="link" href="#4">Soporte Tecnico</a></li>
+                    <li><a class="link" href="#5">Site map </a></li>
                     <li><a class="link" href="politicaCookies.html">Política de Cookies</a></li>
                 </ul>
             </div>
 
             <div class="linksfooter3 col-md-2 col-sm-6">
                 <ul>
+                    <li><a class="link" href="#7">Accesibilidad </a></li>
                     <li><a class="link" href="#8">Forma de Pago </a></li>
                     <li><a class="link" href="#9">Informacion Legal </a></li>
                 </ul>
@@ -182,40 +289,41 @@
             <div class="linksfooter4 col-md-2 col-sm-6">
                 <ul>
                     <li><a class="link" href="#10">Politica De Privacidad </a></li>
-                    <li><a class="link" href="contacto.html">Contactanos</a></li>
+                    <li><a class="link" href="contacto.html">Contacte con nosotros</a></li>
+                    <li><a class="link" href="licencia.html"
+                           onClick="window.open(this.href, this, 'width=600,height=600');
+                     return false;">Licencia </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="social col-md-4 col-sm-12">
                 <a href="http://facebook.com/" class="link facebook" target="_parent">
                     <span class="fa fa-facebook-square "></span>
-                    <span class="oculto">Facebook</span>
                 </a>
                 <a href="https://twitter.com/" class="link twitter" target="_parent"> <span class="fa fa-twitter">
 
-                        </span>
-                    <span class="oculto">Twitter</span>
+            </span>
                 </a>
                 <a href="https://plus.google.com/" class="link google-plus" target="_parent">
                     <span class="fa fa-google-plus-square"></span>
-                    <span class="oculto">Google plus</span>
                 </a>
                 <a href="https://instagram.com/" class="link instagram" target="_parent">
                     <span class="fa fa-instagram"></span>
-                    <span class="oculto">InstaGram</span>
                 </a>
                 <a href="https://youtube.com/" class="link google-plus" target="_parent">
                     <span class="fa fa-youtube"></span>
-                    <span class="oculto">Youtube</span>
                 </a>
             </div>
         </div>
-        <div class="copyright row">
-            <div class="col-xs-12">
-                NaturePath, S.L. - Dirección Fiscal: Calle Panaderos, 28410 Madrid
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
             </div>
-            <div class="col-xs-12">
-                <p>Juan José Ramírez | Isidoro Martín | Miguel Cobertera | Yésica Rojas</p>
+        </div>
+        <div class="copyright row">
+            <div class="col-md-12 col-sm-12">
+                <p>Juan Jose Ramirez | Isidoro Martin | Miguel Cobertera | Yesica Rojas</p>
             </div>
         </div>
     </div>
@@ -226,7 +334,6 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/data/obtainData.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/cookies.js"></script>
 <script type="text/javascript" src="js/sweetalert.min.js"></script>
