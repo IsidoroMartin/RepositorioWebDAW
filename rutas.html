@@ -52,7 +52,6 @@
                             class="icon-bar"></span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,61 +84,71 @@
 <div class="container">
     <div class="row">
         <div id="fondo-filtro">
-            <form class="form-inline" method="get" id="formulario-filtro" onsubmit="return comprobarBuscar(event)">
+            <form class="form-inline" method="POST" action="index.php" id="formulario-filtro"
+                  onsubmit="return comprobarBuscar(event)">
                 <!-- Formulario de filtros | La clase sr-only es para hacer el display del nombre de la ruta en pantallas que no puedan ver el placeholder-->
                 <div class="form-group" style="margin-left:0px">
                     <label for="buscador" class="">Nombre Ruta</label> <br>
-                    <input type="text" class="form-control" id="buscador" placeholder="Nombre de la ruta">
+                    <input type="text" class="form-control" name="busqueda" id="buscador"
+                           placeholder="Nombre de la ruta">
                 </div>
                 <!-- Filtro distancia -->
                 <div class="form-group">
                     <label for="distancia" class="">Distancia</label> <br>
-                    <select class="form-control" id="distancia">
-                        <option value="undefined">Distancia</option>
-                        <option value="1">Menor de 3km</option>
-                        <option value="2">Entre 3km y 6km</option>
-                        <option value="3">Entre 6km y 10km</option>
-                        <option value="4">Mayor de 10km</option>
+                    <select class="form-control" name="distancia" id="distancia">
+                        <optgroup label="Distancia">
+                            <option value="undefined">Distancia</option>
+                            <option value="1">Menor de 3km</option>
+                            <option value="2">Entre 3km y 6km</option>
+                            <option value="3">Entre 6km y 10km</option>
+                            <option value="4">Mayor de 10km</option>
+                        </optgroup>
                     </select>
                 </div>
                 <!-- Filtro Dificultad -->
                 <div class="form-group">
                     <label for="dificultad" class="">Dificultad</label> <br>
-                    <select id="dificultad" class="form-control">
-                        <option value="undefined">Dificultad</option>
-                        <option value="Fácil">Fácil</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Difícil">Difícil</option>
+                    <select id="dificultad" name="dificultad" class="form-control">
+                        <optgroup label="Dificultad">
+                            <option value="undefined">Dificultad</option>
+                            <option value="Fácil">Fácil</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Difícil">Difícil</option>
+                        </optgroup>
                     </select>
                 </div>
                 <!-- Filtro Ubicacion -->
                 <div class="form-group">
-                    <label for="ubicacion" class="">Ubicacion</label> <br>
+                    <label for="ubicacion" name="ubicacion" class="">Ubicación</label> <br>
                     <select id="ubicacion" class="form-control">
-                        <option value="undefined">Ubicación</option>
-                        <option value="Andalucía">Andalucía</option>
-                        <option value="Asturias">Asturias</option>
-                        <option value="Cantabria">Cantabria</option>
-                        <option value="Cataluña">Cataluña</option>
-                        <option value="Galicia">Galicia</option>
-                        <option value="Madrid">Madrid</option>
+                        <optgroup label="Comunidades">
+                            <option name="undefined" value="undefined">Ubicación</option>
+                            <option name="andalucia" value="Andalucía">Andalucía</option>
+                            <option name="asturais" value="Asturias">Asturias</option>
+                            <option name="cantabria" value="Cantabria">Cantabria</option>
+                            <option name="catalonia" value="Cataluña">Cataluña</option>
+                            <option name="galicia" value="Galicia">Galicia</option>
+                            <option name="madrid" value="Madrid">Madrid</option>
+                        </optgroup>
                     </select>
                 </div>
                 <!-- Filtro terreno -->
                 <div class="form-group">
                     <label for="tipo" class="">Tipo de Terreno</label> <br>
-                    <select id="tipo" class="form-control">
-                        <option value="undefined">Tipo de Terreno</option>
-                        <option value="Sendero">Sendero</option>
-                        <option value="Montaña">Montaña</option>
-                        <option value="Bicicleta">Bicicleta</option>
+                    <select id="tipo" name="terreno" class="form-control">
+                        <optgroup label="Tipo de terreno">
+                            <option name="undefined" value="undefined">Tipo de Terreno</option>
+                            <option name="bici" value="Bicicleta">Bicicleta</option>
+                            <option name="montania" value="Montaña">Montaña</option>
+                            <option name="sendero" value="Sendero">Sendero</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div class="form-group">
                     <!-- Botón busqueda --><br>
-                    <button type="button" id="btn-filtro" class="btn btn-success"
-                            onclick="mostrarResultadosFiltrados()">Filtrar
-                    </button>
+                    <input type="submit" id="btn-filtro" value="Filtrar" class="btn btn-success"
+                           onclick="mostrarResultadosFiltrados()">
+                    </input>
                 </div>
             </form>
         </div>
@@ -260,23 +269,23 @@
         <div class="linksfooter row">
             <div class="linksfooter1 col-md-2 col-sm-6">
                 <ul>
-                    <li><a class="link" href="#1">Empresa </a></li>
-                    <li><a class="link" href="#2">Trabaja con Nosotros</a></li>
-                    <li><a class="link" href="#3">Fundacion </a></li>
+                    <li><a class="link" href="licencia.html"
+                           onClick="window.open(this.href, this, 'width=600,height=600');
+                                       return false;">Licencia </a>
+                    </li>
+                    <li><a class="link" href="pagina_ayuda.html">Ayuda</a></li>
                 </ul>
             </div>
 
             <div class="linksfooter2 col-md-2 col-sm-6">
                 <ul>
-                    <li><a class="link" href="#4">Soporte Tecnico</a></li>
-                    <li><a class="link" href="#5">Site map </a></li>
+                    <li><a class="link" href="mapa_web.html">Mapa del sitio web</a></li>
                     <li><a class="link" href="politicaCookies.html">Política de Cookies</a></li>
                 </ul>
             </div>
 
             <div class="linksfooter3 col-md-2 col-sm-6">
                 <ul>
-                    <li><a class="link" href="#7">Accesibilidad </a></li>
                     <li><a class="link" href="#8">Forma de Pago </a></li>
                     <li><a class="link" href="#9">Informacion Legal </a></li>
                 </ul>
@@ -285,41 +294,40 @@
             <div class="linksfooter4 col-md-2 col-sm-6">
                 <ul>
                     <li><a class="link" href="#10">Politica De Privacidad </a></li>
-                    <li><a class="link" href="contacto.html">Contacte con nosotros</a></li>
-                    <li><a class="link" href="licencia.html"
-                           onClick="window.open(this.href, this, 'width=600,height=600');
-                                       return false;">Licencia </a>
-                    </li>
+                    <li><a class="link" href="contacto.html">Contactanos</a></li>
                 </ul>
             </div>
 
             <div class="social col-md-4 col-sm-12">
                 <a href="http://facebook.com/" class="link facebook" target="_parent">
                     <span class="fa fa-facebook-square "></span>
+                    <span class="oculto">Facebook</span>
                 </a>
                 <a href="https://twitter.com/" class="link twitter" target="_parent"> <span class="fa fa-twitter">
 
                         </span>
+                    <span class="oculto">Twitter</span>
                 </a>
                 <a href="https://plus.google.com/" class="link google-plus" target="_parent">
                     <span class="fa fa-google-plus-square"></span>
+                    <span class="oculto">Google plus</span>
                 </a>
                 <a href="https://instagram.com/" class="link instagram" target="_parent">
                     <span class="fa fa-instagram"></span>
+                    <span class="oculto">InstaGram</span>
                 </a>
                 <a href="https://youtube.com/" class="link google-plus" target="_parent">
                     <span class="fa fa-youtube"></span>
+                    <span class="oculto">Youtube</span>
                 </a>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"></div>
-            </div>
-        </div>
         <div class="copyright row">
-            <div class="col-md-12 col-sm-12">
-                <p>Juan Jose Ramirez | Isidoro Martin | Miguel Cobertera | Yesica Rojas</p>
+            <div class="col-xs-12">
+                NaturePath, S.L. - Dirección Fiscal: Calle Panaderos, 28410 Madrid
+            </div>
+            <div class="col-xs-12">
+                <p>Juan José Ramírez | Isidoro Martín | Miguel Cobertera | Yésica Rojas</p>
             </div>
         </div>
     </div>

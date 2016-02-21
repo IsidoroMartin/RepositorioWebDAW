@@ -1,52 +1,32 @@
 <!DOCTYPE html>
-<!--
-Autor= Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
-Fecha= 18 de noviembre. de 2015
-Licencia=  gp130
-Version= 1.0
-Descripcion= Página contacto que contiene el formulario
--->
-<!--
-  Copyright (C) 2015 Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
-
-  This program is free software you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http//www.gnu.org/licenses/>.
-*/
--->
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="img/favicon.png">
     <title>NaturePath</title>
-    <!-- Bootstrap core CSS -->
+    <!-- Librería de bootstrap minimizada -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--formulario -->
-    <link rel="stylesheet" href="css/contacto.css">
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
-    <!-- End Cookie Consent plugin -->
+    <!-- Hoja de estilos para el menu de navegacion -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/rutas.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <script src="./js/cookies.js"></script>
 
+    <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
+    <style>
+        #indice ul {
+            padding-left: 10px;
+        }
+
+        #indice li {
+            display: block
+        }
+    </style>
 </head>
 <body>
-<!-- cabecera  -->
 <div class="container">
     <!-- cabecera  -->
     <div class="row">
@@ -91,43 +71,46 @@ Descripcion= Página contacto que contiene el formulario
                         <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
                         <li><a href="rutas.html">Rutas</a></li>
                         <li><a href="galeria.html">Galería</a></li>
-                        <li class="active"><a href="contacto.html">Contacto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 </div>
-<!-- fin menu navegacion  -->
-
-<!--Contenedor para las migas de pan -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-xs-4 no-padding-left">
-            <div style="margin-top:2%;" class="container">
-                <ol class="breadcrumb no-padding-left">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li class="active">Envio de Formulario</li>
-                </ol>
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-4 " id="encabezado">
-            <h1>DATOS ENVIADOS </h1>
+<div class="container no-padding-left">
+    <div class="col-md-4 col-xs-4 no-padding-left">
+        <div style="margin-top:10px" class="container no-padding-left">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Mapa web</li>
+            </ol>
         </div>
     </div>
-    <div class="datos-enviados row">
-        <br>
-        <div class="container fondoGris center-block">
-            <p>Sus datos se enviaron correctamente, nos pondremos en conctacto lo antes posible </p>
-            <h2> Gracias</h2>
-            <input type="button" style="margin-left:0px;margin-top:30px;" class="btn1" value="Volver"
-                   onclick="window.location.replace('index.html')">
-        </div>
+    <div class="col-md-3 col-xs-4 " id="encabezado">
+        <h1>MAPA WEB</h1>
     </div>
 </div>
-</form>
+<div class="container" style="height:300px;">
+        <h2 id="tit-galeria" class="col-xs-12" style="text-align:center;">El camino más rápido para ir directo a lo que buscas.</h2>
+    <div class="row">
 
+        <ul>
+            <li><a href="index.html" title="home">Home</a></li>
+            <li><a href="rutas.html" title="rutas">Rutas</a></li>
+            <li><a href="galeria.html" title="Galería">Galería</a></li>
+            <li><a href="contacto.html" title="Contacta">Contacta</a></li>
+            <li><a href="licencia.html" title="Terminos Licencia"
+                   onClick="window.open(this.href, this, 'width=600,height=600');return false;">Licencia</a></li>
+            <li><a href="pagina_ayuda.html" title="ayuda">Ayuda</a></li>
+            <li><a href="mapa_web.html" title="Mapa web">Mapa del sitio web</a></li>
+            <li><a href="politicaCookies.html" title="Política de cookies">Política de cookies</a></li>
+            <li><a href="#8" title="Forma de pago">Forma de pago</a></li>
+            <li><a href="#9" title="Información legal">Información legal</a></li>
+            <li><a href="#10" title="política de privacidad">Política de privacidad</a></li>
+        </ul>
+    </div>
+</div>
 
 <!-- /container -->
 <div class="row ">
@@ -205,14 +188,16 @@ Descripcion= Página contacto que contiene el formulario
 </footer>
 <!--Fin pie de pagina  -->
 
-
-<!--Fin pie de pagina  -->
 <!-- Bootstrap core JavaScript
-================================================== -->
+    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/cookies.js"></script>
-<script type="text/javascript" src="js/formulario.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="js/data/obtainData.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script>
+    mensajeBienvenidaSiNecesario();
+</script>
 </body>
 </html>

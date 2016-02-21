@@ -1,52 +1,32 @@
 <!DOCTYPE html>
-<!--
-Autor= Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
-Fecha= 18 de noviembre. de 2015
-Licencia=  gp130
-Version= 1.0
-Descripcion= Página contacto que contiene el formulario
--->
-<!--
-  Copyright (C) 2015 Yesica Rojas, Juan José Ramírez, Isidoro Martín Fontenla
-
-  This program is free software you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http//www.gnu.org/licenses/>.
-*/
--->
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="img/favicon.png">
     <title>NaturePath</title>
-    <!-- Bootstrap core CSS -->
+    <!-- Librería de bootstrap minimizada -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--formulario -->
-    <link rel="stylesheet" href="css/contacto.css">
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
-    <!-- End Cookie Consent plugin -->
+    <!-- Hoja de estilos para el menu de navegacion -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/rutas.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <script src="./js/cookies.js"></script>
 
+    <script type="text/javascript" src="js/politicaCookiesJs.js"></script>
+    <style>
+        #indice ul {
+            padding-left: 10px;
+        }
+
+        #indice li {
+            display: block
+        }
+    </style>
 </head>
 <body>
-<!-- cabecera  -->
 <div class="container">
     <!-- cabecera  -->
     <div class="row">
@@ -91,43 +71,80 @@ Descripcion= Página contacto que contiene el formulario
                         <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
                         <li><a href="rutas.html">Rutas</a></li>
                         <li><a href="galeria.html">Galería</a></li>
-                        <li class="active"><a href="contacto.html">Contacto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 </div>
-<!-- fin menu navegacion  -->
-
-<!--Contenedor para las migas de pan -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-xs-4 no-padding-left">
-            <div style="margin-top:2%;" class="container">
-                <ol class="breadcrumb no-padding-left">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li class="active">Envio de Formulario</li>
-                </ol>
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-4 " id="encabezado">
-            <h1>DATOS ENVIADOS </h1>
+<div class="container no-padding-left">
+    <div class="col-md-4 col-xs-4 no-padding-left">
+        <div style="margin-top:10px" class="container no-padding-left">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Ayuda</li>
+            </ol>
         </div>
     </div>
-    <div class="datos-enviados row">
-        <br>
-        <div class="container fondoGris center-block">
-            <p>Sus datos se enviaron correctamente, nos pondremos en conctacto lo antes posible </p>
-            <h2> Gracias</h2>
-            <input type="button" style="margin-left:0px;margin-top:30px;" class="btn1" value="Volver"
-                   onclick="window.location.replace('index.html')">
+    <div class="col-md-3 col-xs-4 " id="encabezado">
+        <h1>AYUDA</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div id="indice" class="col-xs-3">
+            <ul class="list-group">
+                <li class="list-group-item">Rutas</li>
+                <ul>
+                    <ul class="list-group">
+                        <li class="list-group-item">Buscar ruta por nombre</li>
+                        <li class="list-group-item">Buscar ruta por distancia</li>
+                        <li class="list-group-item">Buscar ruta por dificultad</li>
+                        <li class="list-group-item">Buscar ruta por ubicación</li>
+                        <li class="list-group-item">Buscar ruta por tipo de terreno</li>
+                    </ul>
+                </ul>
+                <li class="list-group-item">Contacto</li>
+                <ul>
+                    <li class="list-group-item">Como rellenar los campos del formulario de consulta</li>
+                    <ul class="list-group">
+                        <li class="list-group-item">Campos nombre y apellidos</li>
+                        <li class="list-group-item">Campo correo electrónico</li>
+                        <li class="list-group-item">Campos teléfono fijo y móvil</li>
+                        <li class="list-group-item">Campo descripción</li>
+                        <li class="list-group-item">Tipo de consulta y asunto</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+        <div class="col-xs-9">
+            <h1>Rutas</h1>
+            <h2 id="rutasNombre">Buscar ruta por nombre</h2>
+            <p>Continuar aqui</p>
+            <h2 id="rutasDistancia">Buscar ruta por distancia</h2>
+
+            <h2 id="rutasDificultad">Buscar ruta por dificultad</h2>
+
+            <h2 id="rutasUbicacion">Buscar ruta por ubicación</h2>
+
+            <h2 id="rutasTipoTerreno">Buscar ruta por tipo de terreno</h2>
+
+            <h1>Formulario de contacto</h1>
+
+            <h2 id="formTexto">Campos nombre y apellidos</h2>
+
+            <h2 id="formEmail">Campo correo electrónico</h2>
+
+            <h2 id="formTfno">Campos teléfono fijo y móvil</h2>
+
+            <h2 id="formDescripcion">Campo descripción</h2>
+
+            <h2 id="formTipoConsulta">Tipo de consulta y asunto</h2>
+
         </div>
     </div>
 </div>
-</form>
-
 
 <!-- /container -->
 <div class="row ">
@@ -205,14 +222,16 @@ Descripcion= Página contacto que contiene el formulario
 </footer>
 <!--Fin pie de pagina  -->
 
-
-<!--Fin pie de pagina  -->
 <!-- Bootstrap core JavaScript
-================================================== -->
+    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/cookies.js"></script>
-<script type="text/javascript" src="js/formulario.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="js/data/obtainData.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script>
+    mensajeBienvenidaSiNecesario();
+</script>
 </body>
 </html>

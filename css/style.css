@@ -122,6 +122,32 @@ footer a {
     opacity: 0.8;
 }
 
+/* Posiciono el buscador en el centro del header*/
+#buscador-header {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+/*Aplico los estilos de la página al buscador del header*/
+#buscador-header button {
+    background-color: #024423;
+    border-color: #024423;
+}
+
+#buscador-header button:hover {
+    background-color: #024423;
+    border-color: #E7E7E7;
+    opacity: 0.8;
+}
+
+#buscador-header input {
+    border: 1px solid #024423;
+}
+
+#buscador-header input:focus {
+    border: 2px solid #024423;
+}
+
 /*margen arriba del parrafo */
 div.copyright p {
     margin-bottom: 0.5%;
@@ -147,7 +173,7 @@ div.linksfooter4 ul li {
     position: relative;
     color: #ffffff;
     top: 65%;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -280,7 +306,7 @@ ol.breadcrumb a {
     transform: translateX(10px) rotate(360deg);
 }
 
-.cookies{
+.cookies {
     font-size: 1.6rem;
 }
 
@@ -425,6 +451,12 @@ ol.breadcrumb a {
     }
 }
 
+/* Clase para ocultar contenido de los links (Accesibilidad)*/
+.oculto {
+    display: none;
+    opacity: 0;
+}
+
 /*boton*/
 /*alto,ancho,pading,fuente,color,fondo,bordes,sombra del boton*/
 .btn1 {
@@ -462,13 +494,13 @@ ol.breadcrumb a {
     color: #FFF;
 }
 
-.btn:active{
-    opacity:0.8;
+.btn:active {
+    opacity: 0.8;
 }
 
 /*fondo gris */
-.fondoGris{
+.fondoGris {
     background-color: #E5E5E5;
-    padding:80px;
-    text-align:center;
+    padding: 80px;
+    text-align: center;
 }

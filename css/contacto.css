@@ -146,12 +146,6 @@ label {
     height: 100px;
 }
 
-/* Retina-ize images/icons */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
-
-}
-
 /*margen fondo bordes ancho,tamaño color de fuente, bordes de las cajas de texto, tel, email, textarea */
 input,
 textarea,
